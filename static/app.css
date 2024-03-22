@@ -1,7 +1,7 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  background-color: #242424;
+
   --grey-100: hsl(30 18% 95%);
   --grey-200: hsl(30 16% 86%);
   --grey-300: hsl(30 14% 76%);
@@ -11,5 +11,171 @@
   --grey-700: hsl(30 6% 39%);
   --grey-800: hsl(30 4% 29%);
   --grey-900: hsl(30 2% 20%);
+  --grey-950: hsl(0, 0%, 14%);
+
+  --orange: hsl(22, 84%, 60%);
+
+  --font-size-s: 0.875rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  --spacing-1: 2px;
+  --spacing-2: 4px;
+  --spacing-3: 8px;
+  --spacing-4: 12px;
+  --spacing-5: 16px;
+  --spacing-6: 20px;
+  --spacing-7: 24px;
+  --spacing-8: 32px;
+  --spacing-9: 40px;
+  --spacing-10: 48px;
+
+  --dimensions-1: 35px;
+  --dimensions-2: 50px;
+  --dimensions-3: 85px;
+  --dimensions-4: 110px;
+  --dimensions-5: 150px;
+  --dimensions-6: 200px;
+  --dimensions-7: 250px;
+  --dimensions-8: 350px;
+  --dimensions-9: 500px;
+  --dimensions-10: 750px;
+
   color: var(--grey-200);
+  background-color: var(--grey-950);
+}
+
+a:visited {
+  color: var(--grey-400);
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.vw-100 {
+  width: 100vh;
+}
+
+.ml-1 {
+  margin-left: var(--spacing-1);
+}
+
+.ml-2 {
+  margin-left: var(--spacing-2);
+}
+
+.ml-3 {
+  margin-left: var(--spacing-3);
+}
+
+.ml-4 {
+  margin-left: var(--spacing-4);
+}
+
+.ml-5 {
+  margin-left: var(--spacing-5);
+}
+
+.ml-6 {
+  margin-left: var(--spacing-6);
+}
+
+.ml-7 {
+  margin-left: var(--spacing-7);
+}
+
+.ml-8 {
+  margin-left: var(--spacing-8);
+}
+
+.ml-9 {
+  margin-left: var(--spacing-9);
+}
+
+.ml-10 {
+  margin-left: var(--spacing-10);
+}
+
+.mt-1 {
+  margin-top: var(--spacing-1);
+}
+
+.mt-2 {
+  margin-top: var(--spacing-2);
+}
+
+.mt-3 {
+  margin-top: var(--spacing-3);
+}
+
+.mt-4 {
+  margin-top: var(--spacing-4);
+}
+
+.mt-5 {
+  margin-top: var(--spacing-5);
+}
+
+.mt-6 {
+  margin-top: var(--spacing-6);
+}
+
+.mt-7 {
+  margin-top: var(--spacing-7);
+}
+
+.mt-8 {
+  margin-top: var(--spacing-8);
+}
+
+.mt-9 {
+  margin-top: var(--spacing-9);
+}
+
+.mt-10 {
+  margin-top: var(--spacing-10);
+}
+
+.gap-1 {
+  gap: var(--spacing-1);
+}
+
+.gap-2 {
+  gap: var(--spacing-2);
+}
+
+.gap-3 {
+  gap: var(--spacing-3);
+}
+
+.gap-4 {
+  gap: var(--spacing-4);
+}
+
+.gap-5 {
+  gap: var(--spacing-5);
+}
+
+.gap-6 {
+  gap: var(--spacing-6);
+}
+
+.gap-7 {
+  gap: var(--spacing-7);
+}
+
+.gap-8 {
+  gap: var(--spacing-8);
+}
+
+.gap-9 {
+  gap: var(--spacing-9);
+}
+
+.gap-10 {
+  gap: var(--spacing-10);
 }
