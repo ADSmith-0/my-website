@@ -17,18 +17,15 @@
       name: "About me",
       path: "/about",
     },
-    {
-      id: 4,
-      name: "Hot takes",
-      path: "/hot_takes",
-    },
   ];
 </script>
 
-<nav>
+<nav class="flex-row-center vw-100 gap-10 ml-8 mt-7">
   {#each navItems as navItem (navItem.id)}
-    <a href={navItem.path} class:highlighted={$page.route.id === navItem.path}
-      >{navItem.name}</a
+    <a
+      href={navItem.path}
+      class="link"
+      class:highlighted={$page.route.id === navItem.path}>{navItem.name}</a
     >
   {/each}
 </nav>
@@ -36,7 +33,12 @@
 <slot />
 
 <style>
+  .link {
+    text-decoration: none;
+  }
   .highlighted {
-    color: red;
+    font-weight: bolder;
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
   }
 </style>
