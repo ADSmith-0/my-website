@@ -1,56 +1,44 @@
 [
-  {
-    "id": 1,
-    "name": "test",
-    "tags": [
-      "html"
-    ],
-    "img": "grately_banner.png",
-    "alt": "grately icon and banner"
-  },
-  {
-    "id": 2,
-    "name": "test",
-    "tags": [
-      "html"
-    ],
-    "img": "grately_banner.png",
-    "alt": "grately icon and banner"
-  },
-  {
-    "id": 3,
-    "name": "test",
-    "tags": [
-      "html"
-    ],
-    "img": "grately_banner.png",
-    "alt": "grately icon and banner"
-  },
-  {
-    "id": 4,
-    "name": "test",
-    "tags": [
-      "html"
-    ],
-    "img": "grately_banner.png",
-    "alt": "grately icon and banner"
-  },
-  {
-    "id": 5,
-    "name": "test",
-    "tags": [
-      "html"
-    ],
-    "img": "grately_banner.png",
-    "alt": "grately icon and banner"
-  },
-  {
-    "id": 6,
-    "name": "test",
-    "tags": [
-      "html"
-    ],
-    "img": "grately_banner.png",
-    "alt": "grately icon and banner"
-  }
+	{
+		"id": 1,
+		"name": "test",
+		"tags": ["html"],
+		"src": "grately_banner.png",
+		"alt": "grately icon and banner"
+	},
+	{
+		"id": 2,
+		"name": "test",
+		"tags": ["html"],
+		"src": "grately_banner.png",
+		"alt": "grately icon and banner"
+	},
+	{
+		"id": 3,
+		"name": "test",
+		"tags": ["html"],
+		"src": "grately_banner.png",
+		"alt": "grately icon and banner"
+	},
+	{
+		"id": 4,
+		"name": "test",
+		"tags": ["html"],
+		"src": "grately_banner.png",
+		"alt": "grately icon and banner"
+	},
+	{
+		"id": 5,
+		"name": "test",
+		"tags": ["html"],
+		"src": "grately_banner.png",
+		"alt": "grately icon and banner"
+	},
+	{
+		"id": 6,
+		"name": "test",
+		"tags": ["html"],
+		"src": "grately_banner.png",
+		"alt": "grately icon and banner"
+	}
 ]

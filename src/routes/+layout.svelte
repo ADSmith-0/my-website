@@ -20,8 +20,8 @@
   ];
 </script>
 
-<div id="content-container" class="ml-8">
-  <nav class="flex-row-center vw-100 gap-10 mt-7">
+<div id="content-container" class="mh-10">
+  <nav class="flex-row-center w-100 gap-10 mt-8">
     {#each navItems as navItem (navItem.id)}
       <a
         href={navItem.path}
