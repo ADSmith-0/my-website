@@ -24,7 +24,7 @@
 
   const navFocus = (event: MouseEvent | FocusEvent) => {
     const element = event.target as HTMLAnchorElement;
-    if (navMenu && element && element.classList.contains("link")) {
+    if (navMenu && element && element.classList.contains("nav-item")) {
       navMenu.style.setProperty(
         "--underline-width",
         `${element.offsetWidth}px`,
@@ -69,7 +69,7 @@
     {#each navItems as navItem (navItem.id)}
       <a
         href={navItem.path}
-        class="link pb-2"
+        class="nav-item pb-2"
         class:highlighted={$page.route.id === navItem.path}>{navItem.name}</a
       >
     {/each}
@@ -97,9 +97,6 @@
     transition:
       transform 0.4s,
       width 0.4s;
-  }
-  .link {
-    text-decoration: none;
   }
   .highlighted {
     font-weight: bolder;
