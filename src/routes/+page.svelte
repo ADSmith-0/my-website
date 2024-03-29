@@ -20,10 +20,10 @@
       </a>
     {/each}
   </div>
-  <a href="/projects" class="flex-row-center gap-2 mt-10 pb-2 link"
+  <a href="/projects" class="flex-row-center gap-2 mt-10 pb-2 fs-l link"
     >View More Projects <ChevronsRight
       color="var(--grey-200)"
-      size="var(--font-size-m)"
+      size="var(--font-size-l)"
     /></a
   >
 </div>
