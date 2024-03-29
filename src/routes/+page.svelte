@@ -20,34 +20,10 @@
       </a>
     {/each}
   </div>
-  <a href="/projects" class="flex-row-center gap-2 mt-10 pb-2 link"
+  <a href="/projects" class="flex-row-center gap-2 mt-10 pb-2"
     >View More Projects <ChevronsRight
       color="var(--grey-200)"
       size="var(--font-size-m)"
     /></a
   >
 </div>
-
-<style>
-  .link {
-    text-decoration: none;
-    position: relative;
-  }
-  .link:visited {
-    color: var(--grey-200);
-  }
-  .link::after {
-    content: "";
-    display: block;
-    bottom: 0;
-    left: 0;
-    height: var(--spacing-1);
-    position: absolute;
-    width: 0;
-    background-color: var(--grey-200);
-    transition: width 0.2s ease-out;
-  }
-  .link:hover::after {
-    width: 100%;
-  }
-</style>

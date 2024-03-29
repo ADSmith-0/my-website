@@ -66,8 +66,29 @@ h2 {
   z-index: 2;
 }
 
+a {
+  text-decoration: none;
+  position: relative;
+}
+
 a:visited {
-  color: var(--grey-400);
+  color: var(--grey-200);
+}
+
+a::after {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: var(--spacing-1);
+  position: absolute;
+  width: 0;
+  background-color: var(--grey-200);
+  transition: width 0.2s ease-out;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 .flex-row-center {
