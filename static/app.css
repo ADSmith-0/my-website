@@ -66,15 +66,13 @@ h2 {
   z-index: 2;
 }
 
-a {
-  text-decoration: none;
-}
-
+a,
 a:visited {
+  text-decoration: none;
   color: var(--grey-200);
 }
 
-.link {
+a.link {
   position: relative;
   background-image: linear-gradient(var(--grey-200) 0 0);
   background-position: 0 100%;
@@ -84,7 +82,7 @@ a:visited {
 }
 
 
-.link:hover {
+a.link:hover {
   background-position: 100% 100%;
   background-size: 100% var(--spacing-1);
 }
