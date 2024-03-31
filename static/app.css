@@ -19,6 +19,9 @@
   --font-size-m: 1rem;
   --font-size-l: 1.25rem;
   --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
 
   --spacing-1: 2px;
   --spacing-2: 4px;
@@ -117,6 +120,22 @@ a.link:hover {
 
 .margin-auto {
   margin: auto;
+}
+
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+
+.fs-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.fs-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.fs-4xl {
+  font-size: var(--font-size-4xl);
 }
 
 .fixed {

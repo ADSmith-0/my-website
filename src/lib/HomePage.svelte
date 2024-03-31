@@ -29,10 +29,13 @@
 <svelte:window bind:innerHeight={height} />
 
 <div
-  class="flex-row-center justify-center"
+  class="flex-column-center justify-content-center"
   style:height={height ? height + "px" : "100vh"}
 >
   {#if height}
-    <h1 transition:typewriter>Hi, I'm Adam</h1>
+    <h1 transition:typewriter class="fs-4xl">Hi, I'm Adam</h1>
+    <p class="fs-xl">
+      I enjoy making interactive and visually stunning website
+    </p>
   {/if}
 </div>
