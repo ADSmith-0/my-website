@@ -6,17 +6,17 @@
     {
       id: 1,
       name: "Home",
-      path: "/",
+      path: "#home",
     },
     {
       id: 2,
       name: "Projects",
-      path: "/projects",
+      path: "#projects",
     },
     {
       id: 3,
       name: "About me",
-      path: "/about",
+      path: "#about",
     },
   ];
 
@@ -59,7 +59,7 @@
 
 <div id="content-container" class="mh-10">
   <nav
-    class="flex-row-center w-100 gap-10 mt-8 nav-menu"
+    class="flex-row-center fixed top-0 w-100 gap-10 mt-8 nav-menu"
     on:mouseover={navFocus}
     on:mouseleave={resetUnderline}
     on:focus={navFocus}
@@ -70,7 +70,7 @@
       <a
         href={navItem.path}
         class="nav-item pb-2"
-        class:highlighted={$page.route.id === navItem.path}>{navItem.name}</a
+        class:highlighted={$page.url.hash === navItem.path}>{navItem.name}</a
       >
     {/each}
   </nav>
@@ -81,8 +81,6 @@
   .nav-menu {
     --underline-width: 0;
     --underline-offset-x: 0;
-
-    position: relative;
   }
   .nav-menu::before {
     content: "";
