@@ -32,6 +32,7 @@
 <svelte:window bind:innerHeight={height} />
 
 <div
+  id="home"
   class="flex-column-center justify-content-center"
   style:height={height ? height + "px" : "100vh"}
 >
