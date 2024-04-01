@@ -138,6 +138,14 @@ a.link:hover {
   font-size: var(--font-size-4xl);
 }
 
+.text-secondary {
+  color: var(--grey-700);
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
 .fixed {
   position: fixed;
 }
