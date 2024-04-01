@@ -52,7 +52,18 @@
     }
   };
 
+  const initUnderline = () => {
+    if (window.location.hash === "") {
+      window.location.replace(window.location.href + "#home");
+      const homeNavItem = document.querySelector("a[href='#home']");
+      if (homeNavItem) {
+        homeNavItem.classList.add("highlighted");
+      }
+    }
+  };
+
   onMount(() => {
+    initUnderline();
     resetUnderline();
   });
 </script>
