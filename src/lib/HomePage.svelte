@@ -1,5 +1,7 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
+  import { height } from "./stores";
+  import Page from "./Page.svelte";
 
   const typewriter = (node: Node) => {
     const speed = 1;
@@ -25,34 +27,22 @@
     };
   };
 
-  let height: number;
   let headerVisible: boolean = false;
 </script>
 
-<svelte:window bind:innerHeight={height} />
-
-<div
-  id="home"
-  class="flex-column-center justify-content-center"
-  style:height={height ? height + "px" : "100vh"}
->
-  {#if height}
-    <h1
-      transition:typewriter
-      class="fs-4xl"
-      on:introend={() => (headerVisible = true)}
-    >
-      Hi, I'm Adam
-    </h1>
-    {#if !headerVisible}
-      <p class="fs-xl text-secondary opacity-0">.</p>
-    {:else}
-      <p
-        class="fs-xl text-secondary"
-        transition:fly={{ y: 200, duration: 2000 }}
-      >
-        I enjoy making interactive and visually stunning websites
-      </p>
-    {/if}
+<Page id="home">
+  <h1
+    transition:typewriter
+    class="fs-4xl"
+    on:introend={() => (headerVisible = true)}
+  >
+    Hi, I'm Adam
+  </h1>
+  {#if !headerVisible}
+    <p class="fs-xl text-secondary opacity-0">.</p>
+  {:else}
+    <p class="fs-xl text-secondary" transition:fly={{ y: 200, duration: 2000 }}>
+      I enjoy making interactive and visually stunning websites
+    </p>
   {/if}
-</div>
+</Page>

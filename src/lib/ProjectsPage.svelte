@@ -1,10 +1,11 @@
 <script lang="ts">
   import { ChevronsRight } from "lucide-svelte";
   import type { PageData } from "../routes/$types";
+  import Page from "./Page.svelte";
   export let data: PageData;
 </script>
 
-<div id="projects">
+<Page id="projects">
   <h1>Top Projects</h1>
   <div
     class="flex-row-center flex-wrap gap-8 justify-content-center"
@@ -26,4 +27,4 @@
       size="var(--font-size-l)"
     /></a
   >
-</div>
+</Page>
