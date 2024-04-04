@@ -6,7 +6,7 @@
 <div
   {id}
   class="flex-column-center justify-content-center"
-  style:height={$height ? $height + "px" : "100vh"}
+  style:min-height={$height ? $height + "px" : "100vh"}
 >
   {#if $height}
     <slot />
