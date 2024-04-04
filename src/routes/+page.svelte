@@ -9,8 +9,6 @@
 
 <svelte:window bind:innerHeight={$height} />
 
-<div class="flex-column-center">
-  <HomePage />
-  <ProjectsPage {data} />
-  <AboutPage />
-</div>
+<HomePage />
+<ProjectsPage {data} />
+<AboutPage />
