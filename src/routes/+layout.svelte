@@ -68,23 +68,28 @@
   });
 </script>
 
-<div id="content-container" class="mh-10">
-  <nav
-    class="flex-row-center fixed top-0 w-100 gap-10 mt-8 nav-menu"
-    on:mouseover={navFocus}
-    on:mouseleave={resetUnderline}
-    on:focus={navFocus}
-    on:blur={resetUnderline}
-    bind:this={navMenu}
+<div id="content-container">
+  <div
+    class="fixed top-0 w-100 pb-8 bg-grey-950"
+    style="border-bottom: 1px solid var(--grey-800)"
   >
-    {#each navItems as navItem (navItem.id)}
-      <a
-        href={navItem.path}
-        class="nav-item pb-2"
-        class:highlighted={$page.url.hash === navItem.path}>{navItem.name}</a
-      >
-    {/each}
-  </nav>
+    <nav
+      class="flex-row-center relative gap-10 pl-10 pt-8 nav-menu"
+      on:mouseover={navFocus}
+      on:mouseleave={resetUnderline}
+      on:focus={navFocus}
+      on:blur={resetUnderline}
+      bind:this={navMenu}
+    >
+      {#each navItems as navItem (navItem.id)}
+        <a
+          href={navItem.path}
+          class="nav-item pb-2"
+          class:highlighted={$page.url.hash === navItem.path}>{navItem.name}</a
+        >
+      {/each}
+    </nav>
+  </div>
   <slot />
 </div>
 
