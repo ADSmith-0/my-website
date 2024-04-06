@@ -1,6 +1,5 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
-  import { height } from "./stores";
   import Page from "./Page.svelte";
 
   const typewriter = (node: Node) => {
