@@ -189,12 +189,18 @@ a.link:hover {
 }
 
 .border-1 {
-  border-width: var(--spacing-1);
+  border-width: 1px;
   border-style: solid;
 }
 
 .br-1 {
-  border-radius: var(--spacing-2);
+  border-radius: 4px;
+}
+
+.bb-1 {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-style: solid;
 }
 
 .border-grey-600 {

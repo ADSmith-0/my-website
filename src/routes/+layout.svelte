@@ -69,10 +69,7 @@
 </script>
 
 <div id="content-container">
-  <div
-    class="fixed top-0 w-100 pb-8 bg-grey-950"
-    style="border-bottom: 1px solid var(--grey-800)"
-  >
+  <div class="fixed top-0 w-100 pb-8 bg-grey-950 bb-1 border-grey-800">
     <nav
       class="flex-row-center relative gap-10 pl-10 pt-8 nav-menu"
       on:mouseover={navFocus}
