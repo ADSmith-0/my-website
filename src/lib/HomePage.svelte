@@ -29,7 +29,16 @@
   let headerVisible: boolean = false;
 </script>
 
-<Page id="home">
+<Page
+  id="home"
+  style="
+    background-image: radial-gradient(
+      circle at left bottom,
+      var(--orange--10),
+      var(--purple--10)
+    );
+  "
+>
   <h1
     transition:typewriter
     class="fs-4xl"
