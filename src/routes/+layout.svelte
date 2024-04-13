@@ -66,10 +66,19 @@
     initUnderline();
     resetUnderline();
   });
+
+  let scrollY: number;
+
+  // TODO: Add that the underline changes as you scroll down
 </script>
 
+<svelte:window bind:scrollY />
+
 <div id="content-container">
-  <div class="fixed top-0 w-100 pb-8 bg-transparent bb-1 border-grey-800 z-max">
+  <div
+    class="fixed top-0 w-100 pb-8 bg-transparent z-max {scrollY > 0 &&
+      'bb-1 bg-grey-950 border-grey-800'}"
+  >
     <nav
       class="flex-row-center relative gap-10 pl-10 pt-8 nav-menu"
       on:mouseover={navFocus}

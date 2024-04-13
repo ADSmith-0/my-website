@@ -16,6 +16,10 @@
 
   --orange: hsl(22 84% 60%);
   --orange--10: hsla(22 84% 60% / 10%);
+
+  --purple: hsl(260 50% 40%);
+  --purple--10: hsl(260 50% 40% / 10%);
+
   --font-size-s: 0.875rem;
   --font-size-m: 1rem;
   --font-size-l: 1.25rem;
@@ -61,6 +65,10 @@
   background-color: var(--grey-950);
 }
 
+.bg-grey-900-50 {
+  background: var(--grey-900-50);
+}
+
 .bg-transparent {
   background-color: "transparent";
 }
@@ -69,13 +77,8 @@ body {
   margin: 0;
 }
 
-h1 {
-  z-index: 99;
-}
-
 h2 {
   font-size: var(--font-size-l);
-  z-index: 99;
 }
 
 .cursor-pointer {
