@@ -20,6 +20,8 @@ const navItems = [
 	},
 ];
 
+// TODO: Move scroll listener and height listener to here
+
 let navMenu: HTMLElement;
 
 const navFocus = (event: MouseEvent | FocusEvent) => {
