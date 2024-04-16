@@ -11,5 +11,19 @@
         "noConsole": "warn"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "include": [
+        "*.svelte"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off"
+          }
+        }
+      }
+    }
+  ]
 }
