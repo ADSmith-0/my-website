@@ -1,19 +1,19 @@
 <script lang="ts">
-import GratelyIcon from "$lib/icons/GratelyIcon.svelte";
-import ChessIcon from "$lib/icons/ChessIcon.svelte";
-import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
-import { ChevronsRight } from "lucide-svelte";
-import type { ComponentType } from "svelte";
-import type { PageData } from "../routes/$types";
-import Page from "./Page.svelte";
-import Card from "./projects/Card.svelte";
-export let data: PageData;
+  import GratelyIcon from "$lib/icons/GratelyIcon.svelte";
+  import ChessIcon from "$lib/icons/ChessIcon.svelte";
+  import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
+  import { ChevronsRight } from "lucide-svelte";
+  import type { ComponentType } from "svelte";
+  import type { PageData } from "../routes/$types";
+  import Page from "./Page.svelte";
+  import Card from "./projects/Card.svelte";
+  export let data: PageData;
 
-const components: Record<string, ComponentType> = {
-	GratelyIcon,
-	ChessIcon,
-	NeovimIcon,
-};
+  const components: Record<string, ComponentType> = {
+    GratelyIcon,
+    ChessIcon,
+    NeovimIcon,
+  };
 </script>
 
 <Page id="projects">

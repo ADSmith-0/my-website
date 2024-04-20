@@ -1,5 +1,5 @@
 <script>
-import Page from "./Page.svelte";
+  import Page from "./Page.svelte";
 </script>
 
 <Page id="about">
