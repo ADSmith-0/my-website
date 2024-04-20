@@ -1,6 +1,5 @@
 [
 	{
-		"id": 1,
 		"name": "Grately",
 		"tags": ["html"],
 		"link": "#",
@@ -8,7 +7,6 @@
 		"iconSize": 80
 	},
 	{
-		"id": 2,
 		"name": "Chess",
 		"tags": ["html"],
 		"link": "https://main--vanilla-js-chess-v1.netlify.app/",
@@ -16,7 +14,6 @@
 		"iconSize": 65
 	},
 	{
-		"id": 3,
 		"name": "Neovim config",
 		"tags": ["html"],
 		"link": "https://github.com/ADSmith-0/Nvim-config",
@@ -24,27 +21,38 @@
 		"iconSize": 50
 	},
 	{
-		"id": 4,
 		"name": "Portfolio Website",
 		"tags": ["html"],
-		"link": "#",
+		"link": "https://github.com/ADSmith-0/my-website",
 		"icon": "NeovimIcon",
 		"iconSize": 50
 	},
 	{
-		"id": 5,
 		"name": "Artist Network",
 		"tags": ["html"],
-		"link": "#",
+		"link": "https://github.com/ADSmith-0/Artist-Network",
 		"icon": "NeovimIcon",
 		"iconSize": 50
 	},
 	{
-		"id": 6,
 		"name": "JS Patterns",
 		"tags": ["html"],
-		"link": "#",
-		"icon": "NeovimIcon",
+		"link": "https://github.com/ADSmith-0/test-js",
+		"icon": "JavaScriptIcon",
+		"iconSize": 50
+	},
+	{
+		"name": "Pokedex",
+		"tags": ["html"],
+		"link": "https://pokedex001.netlify.app/",
+		"icon": "JavaScriptIcon",
+		"iconSize": 50
+	},
+	{
+		"name": "Traversy JS Challenges",
+		"tags": ["html"],
+		"link": "https://github.com/ADSmith-0/traversy-js-challenges",
+		"icon": "JavaScriptIcon",
 		"iconSize": 50
 	}
 ]

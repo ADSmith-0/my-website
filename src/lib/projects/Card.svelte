@@ -7,7 +7,9 @@
 <a
   href={link}
   target="_blank"
+  rel="noopener noreferrer"
   class="flex-row-center justify-content-center card p-5 gap-5 border-2 br-1 border-grey-600 cursor-pointer"
+  style="box-sizing: border-box;"
   style:background
 >
   <slot name="image" />
@@ -18,8 +20,8 @@
 
 <style>
   .card {
-    width: 250px;
-    height: 150px;
+    width: var(--project-card-size);
+    height: 170px;
   }
   .text-shadow {
     text-shadow:
