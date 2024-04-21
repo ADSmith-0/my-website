@@ -45,8 +45,8 @@
 		"name": "Pokedex",
 		"tags": ["html"],
 		"link": "https://pokedex001.netlify.app/",
-		"icon": "JavaScriptIcon",
-		"iconSize": 50
+		"icon": "PokedexIcon",
+		"iconSize": 70
 	},
 	{
 		"name": "Traversy JS Challenges",
