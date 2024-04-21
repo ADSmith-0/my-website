@@ -3,6 +3,7 @@
   import ChessIcon from "$lib/icons/ChessIcon.svelte";
   import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
   import JavaScriptIcon from "$lib/icons/JavaScriptIcon.svelte";
+  import ArtistNetworkIcon from "$lib/icons/ArtistNetworkIcon.svelte";
   import PokedexIcon from "$lib/icons/PokedexIcon.svelte";
   import { ChevronsRight } from "lucide-svelte";
   import type { ComponentType } from "svelte";
@@ -15,6 +16,7 @@
     GratelyIcon,
     ChessIcon,
     NeovimIcon,
+    ArtistNetworkIcon,
     JavaScriptIcon,
     PokedexIcon,
   };

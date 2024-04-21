@@ -31,8 +31,8 @@
 		"name": "Artist Network",
 		"tags": ["html"],
 		"link": "https://github.com/ADSmith-0/Artist-Network",
-		"icon": "NeovimIcon",
-		"iconSize": 50
+		"icon": "ArtistNetworkIcon",
+		"iconSize": 70
 	},
 	{
 		"name": "JS Patterns",

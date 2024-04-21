@@ -1,0 +1,13 @@
+<svg viewBox="0 0 100 100">
+  <g stroke-width="4" stroke="white" fill="var(--grey-950)">
+    <path
+      d="M 15 90 L 50 10 L 70 55 L 30 55 L 70 55 L 85 90"
+      fill="transparent"
+    />
+    <circle cx="15" cy="90" r="8" />
+    <circle cx="30" cy="55" r="8" />
+    <circle cx="50" cy="10" r="8" />
+    <circle cx="70" cy="55" r="8" />
+    <circle cx="85" cy="90" r="8" />
+  </g>
+</svg>
