@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let link: string;
-  export let text: string;
-  export let background = "var(--grey-950)";
+export let link: string;
+export let text: string;
+export let background = "var(--grey-950)";
 </script>
 
 <a

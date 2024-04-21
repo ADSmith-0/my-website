@@ -1,7 +1,7 @@
 <script>
-  import Page from "./Page.svelte";
+import Page from "./Page.svelte";
 </script>
 
 <Page id="about">
-  <h2>About</h2>
+  <h2>About me</h2>
 </Page>

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { height } from "./stores";
-  export let id: string;
-  export let style = "";
+import { height } from "./stores";
+export let id: string;
+export let style = "";
 </script>
 
 <div

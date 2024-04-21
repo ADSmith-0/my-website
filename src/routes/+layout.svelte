@@ -1,77 +1,72 @@
 <script lang="ts">
-  import { page } from "$app/stores";
-  import { onMount } from "svelte";
+import { page } from "$app/stores";
+import { onMount } from "svelte";
 
-  const navItems = [
-    {
-      id: 1,
-      name: "Home",
-      path: "#home",
-    },
-    {
-      id: 2,
-      name: "Projects",
-      path: "#projects",
-    },
-    {
-      id: 3,
-      name: "About me",
-      path: "#about",
-    },
-  ];
+const navItems = [
+	{
+		id: 1,
+		name: "Home",
+		path: "#home",
+	},
+	{
+		id: 2,
+		name: "Projects",
+		path: "#projects",
+	},
+	{
+		id: 3,
+		name: "About me",
+		path: "#about",
+	},
+];
 
-  // TODO: Move scroll listener and height listener to here
+// TODO: Move scroll listener and height listener to here
 
-  let navMenu: HTMLElement;
+let navMenu: HTMLElement;
 
-  const navFocus = (event: MouseEvent | FocusEvent) => {
-    const element = event.target as HTMLAnchorElement;
-    if (navMenu && element && element.classList.contains("nav-item")) {
-      navMenu.style.setProperty(
-        "--underline-width",
-        `${element.offsetWidth}px`,
-      );
-      navMenu.style.setProperty(
-        "--underline-offset-x",
-        `${element.offsetLeft}px`,
-      );
-    }
-  };
+const navFocus = (event: MouseEvent | FocusEvent) => {
+	const element = event.target as HTMLAnchorElement;
+	if (navMenu && element && element.classList.contains("nav-item")) {
+		navMenu.style.setProperty("--underline-width", `${element.offsetWidth}px`);
+		navMenu.style.setProperty(
+			"--underline-offset-x",
+			`${element.offsetLeft}px`,
+		);
+	}
+};
 
-  const resetUnderline = () => {
-    const highlightedLink = document.querySelector(
-      ".highlighted",
-    ) as HTMLElement;
-    if (highlightedLink) {
-      navMenu.style.setProperty(
-        "--underline-width",
-        `${highlightedLink.offsetWidth}px`,
-      );
-      navMenu.style.setProperty(
-        "--underline-offset-x",
-        `${highlightedLink.offsetLeft}px`,
-      );
-    }
-  };
+const resetUnderline = () => {
+	const highlightedLink = document.querySelector(".highlighted") as HTMLElement;
+	if (highlightedLink) {
+		navMenu.style.setProperty(
+			"--underline-width",
+			`${highlightedLink.offsetWidth}px`,
+		);
+		navMenu.style.setProperty(
+			"--underline-offset-x",
+			`${highlightedLink.offsetLeft}px`,
+		);
+	}
+};
 
-  const initUnderline = () => {
-    if (window.location.hash === "") {
-      window.location.replace(`${window.location.href}#home`);
-      const homeNavItem = document.querySelector("a[href='#home']");
-      if (homeNavItem) {
-        homeNavItem.classList.add("highlighted");
-      }
-    }
-  };
+const initUnderline = () => {
+	if (window.location.hash === "") {
+		window.location.replace(`${window.location.href}#home`);
+		const homeNavItem = document.querySelector("a[href='#home']");
+		if (homeNavItem) {
+			homeNavItem.classList.add("highlighted");
+		}
+	}
+};
 
-  onMount(() => {
-    initUnderline();
-    resetUnderline();
-  });
+onMount(() => {
+	initUnderline();
+	resetUnderline();
+});
 
-  let scrollY: number;
+let scrollY: number;
 
-  // TODO: Add that the underline changes as you scroll down
+// TODO: Add that the underline changes as you scroll down
 </script>
 
 <svelte:window bind:scrollY />
