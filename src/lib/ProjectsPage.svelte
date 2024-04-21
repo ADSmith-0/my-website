@@ -1,25 +1,27 @@
 <script lang="ts">
-  import GratelyIcon from "$lib/icons/GratelyIcon.svelte";
-  import ChessIcon from "$lib/icons/ChessIcon.svelte";
-  import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
-  import JavaScriptIcon from "$lib/icons/JavaScriptIcon.svelte";
-  import ArtistNetworkIcon from "$lib/icons/ArtistNetworkIcon.svelte";
-  import PokedexIcon from "$lib/icons/PokedexIcon.svelte";
-  import { ChevronsRight } from "lucide-svelte";
-  import type { ComponentType } from "svelte";
-  import type { PageData } from "../routes/$types";
-  import Page from "./Page.svelte";
-  import Card from "./projects/Card.svelte";
-  export let data: PageData;
+import GratelyIcon from "$lib/icons/GratelyIcon.svelte";
+import ChessIcon from "$lib/icons/ChessIcon.svelte";
+import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
+import JavaScriptIcon from "$lib/icons/JavaScriptIcon.svelte";
+import ArtistNetworkIcon from "$lib/icons/ArtistNetworkIcon.svelte";
+import PokedexIcon from "$lib/icons/PokedexIcon.svelte";
+import SvelteIcon from "$lib/icons/SvelteIcon.svelte";
+import { ChevronsRight } from "lucide-svelte";
+import type { ComponentType } from "svelte";
+import type { PageData } from "../routes/$types";
+import Page from "./Page.svelte";
+import Card from "./projects/Card.svelte";
+export let data: PageData;
 
-  const components: Record<string, ComponentType> = {
-    GratelyIcon,
-    ChessIcon,
-    NeovimIcon,
-    ArtistNetworkIcon,
-    JavaScriptIcon,
-    PokedexIcon,
-  };
+const components: Record<string, ComponentType> = {
+	GratelyIcon,
+	ChessIcon,
+	NeovimIcon,
+	ArtistNetworkIcon,
+	JavaScriptIcon,
+	PokedexIcon,
+	SvelteIcon,
+};
 </script>
 
 <Page id="projects">
