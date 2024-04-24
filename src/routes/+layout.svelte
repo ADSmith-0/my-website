@@ -1,5 +1,6 @@
 <script lang="ts">
 import { page } from "$app/stores";
+import { height } from "$lib/stores";
 import { onMount } from "svelte";
 
 const navItems = [
@@ -19,8 +20,6 @@ const navItems = [
 		path: "#about",
 	},
 ];
-
-// TODO: Move scroll listener and height listener to here
 
 let navMenu: HTMLElement;
 
@@ -69,7 +68,7 @@ let scrollY: number;
 // TODO: Add that the underline changes as you scroll down
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerHeight={$height} />
 
 <div id="content-container">
   <div
