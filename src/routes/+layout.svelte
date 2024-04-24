@@ -1,6 +1,7 @@
 <script lang="ts">
 import { page } from "$app/stores";
 import { height } from "$lib/stores";
+import { updateHash } from "$lib/utils";
 import { onMount } from "svelte";
 
 const navItems = [
@@ -49,15 +50,46 @@ const resetUnderline = () => {
 };
 
 onMount(() => {
+	window.addEventListener("hashchange", resetUnderline);
+
+	const intersectionCallback: IntersectionObserverCallback = (entries) => {
+		for (const entry of entries) {
+			if (entry.isIntersecting) {
+				updateHash(`#${entry.target.id}`);
+			}
+		}
+	};
+
+	const observer = new IntersectionObserver(intersectionCallback, {
+		root: null,
+		threshold: 0.55,
+	});
+
 	if (window.location.hash === "") {
-		window.location.replace(`${window.location.href}#home`);
+		updateHash("#home");
 	}
-	setTimeout(resetUnderline, 500);
+
+	const home = document.getElementById("home") ?? new Element();
+	observer.observe(home);
+
+	const projects = document.getElementById("projects") ?? new Element();
+	observer.observe(projects);
+
+	const about = document.getElementById("about") ?? new Element();
+	observer.observe(about);
+
+	const timeout = setTimeout(resetUnderline, 50);
+
+	return () => {
+		window.removeEventListener("hashchange", resetUnderline);
+		observer.unobserve(home);
+		observer.unobserve(projects);
+		observer.unobserve(about);
+		clearTimeout(timeout);
+	};
 });
 
 let scrollY: number;
-
-// TODO: Add that the underline changes as you scroll down
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight={$height} />
