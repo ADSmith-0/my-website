@@ -48,19 +48,11 @@ const resetUnderline = () => {
 	}
 };
 
-const initUnderline = () => {
+onMount(() => {
 	if (window.location.hash === "") {
 		window.location.replace(`${window.location.href}#home`);
-		const homeNavItem = document.querySelector("a[href='#home']");
-		if (homeNavItem) {
-			homeNavItem.classList.add("highlighted");
-		}
 	}
-};
-
-onMount(() => {
-	initUnderline();
-	resetUnderline();
+	setTimeout(resetUnderline, 500);
 });
 
 let scrollY: number;
@@ -87,7 +79,9 @@ let scrollY: number;
         <a
           href={navItem.path}
           class="nav-item pb-2"
-          class:highlighted={$page.url.hash === navItem.path}>{navItem.name}</a
+          class:highlighted={$page.url.hash === ""
+            ? navItem.path === "home"
+            : $page.url.hash === navItem.path}>{navItem.name}</a
         >
       {/each}
     </nav>
