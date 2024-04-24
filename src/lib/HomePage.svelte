@@ -42,11 +42,15 @@ let headerVisible = false;
   <h1 transition:typewriter on:introend={() => (headerVisible = true)}>
     Hi, I'm Adam
   </h1>
-  {#if !headerVisible}
-    <p class="fs-xl text-secondary opacity-0">.</p>
-  {:else}
-    <p class="fs-xl text-secondary" transition:fly={{ y: 200, duration: 2000 }}>
-      I enjoy making interactive and visually stunning websites
-    </p>
-  {/if}
+  <span class="mt-10" style="flex: 0 1 100px;">
+    {#if headerVisible}
+      <p
+        class="fs-xl text-secondary text-center"
+        style="width: 25em;"
+        transition:fly={{ y: 200, duration: 2000 }}
+      >
+        I enjoy making interactive and visually stunning websites
+      </p>
+    {/if}
+  </span>
 </Page>
