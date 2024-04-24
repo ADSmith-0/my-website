@@ -25,7 +25,7 @@ const components: Record<string, ComponentType> = {
 </script>
 
 <Page id="projects">
-  <h2>Top Projects</h2>
+  <h2 class="mv-10">Top Projects</h2>
   <div
     class="flex-row-center flex-wrap gap-10 justify-content"
     style="max-width: 996px;"
