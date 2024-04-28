@@ -62,7 +62,7 @@ onMount(() => {
 
 	const observer = new IntersectionObserver(intersectionCallback, {
 		root: null,
-		threshold: 0.55,
+		threshold: 0.95,
 	});
 
 	if (window.location.hash === "") {
