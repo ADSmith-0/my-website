@@ -37,11 +37,11 @@ const favouriteTechnologies: [string, ComponentType][] = [
       {/each}
     </List>
     <List title="Currently learning">
-      <li>
+      <li class="fs-xl">
         <a href="https://www.refactoringui.com/" class="link">Refactoring UI</a>
       </li>
-      <li>Go lang</li>
-      <li>The <strong>C</strong> programming language</li>
+      <li class="fs-xl">Go lang</li>
+      <li class="fs-xl">The <strong>C</strong> programming language</li>
     </List>
   </div>
 </Page>
