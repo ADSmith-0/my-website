@@ -65,10 +65,6 @@ onMount(() => {
 		threshold: 0.95,
 	});
 
-	if (window.location.hash === "") {
-		updateHash("#home");
-	}
-
 	const home = document.getElementById("home") ?? new Element();
 	observer.observe(home);
 
