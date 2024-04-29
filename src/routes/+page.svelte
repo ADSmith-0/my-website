@@ -2,7 +2,7 @@
 import type { PageData } from "./$types";
 import HomePage from "$lib/HomePage.svelte";
 import ProjectsPage from "$lib/ProjectsPage.svelte";
-import AboutPage from "$lib/AboutPage.svelte";
+import AboutPage from "$lib/AboutPage/AboutPage.svelte";
 export let data: PageData;
 </script>
 
