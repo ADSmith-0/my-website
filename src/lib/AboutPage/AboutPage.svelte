@@ -14,7 +14,7 @@ const favouriteTechnologies: [name: string, icon: ComponentType][] = [
 	["Bash", BashIcon],
 ];
 
-const favouriteResources: [name: string, link: string][] = [
+const favouriteLearningResources: [name: string, link: string][] = [
 	["Refactoring UI", "https://www.refactoringui.com/"],
 	["The Primeagen", "https://www.youtube.com/@ThePrimeTimeagen/videos"],
 	["MDN", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"],
@@ -44,8 +44,8 @@ const favouriteResources: [name: string, link: string][] = [
         </li>
       {/each}
     </List>
-    <List title="Favourite resources">
-      {#each favouriteResources as [name, link]}
+    <List title="Favourite learning resources">
+      {#each favouriteLearningResources as [name, link]}
         <li class="fs-xl">
           <a href={link} class="link" target="_blank" rel="noopener noreferrer"
             >{name}</a
