@@ -79,6 +79,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -167,6 +168,18 @@ a.link:hover {
 .grid-col-3fr {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1020px) {
+  .grid-col-3fr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 672px) {
+  .grid-col-3fr {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .border-box {
