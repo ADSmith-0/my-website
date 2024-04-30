@@ -159,6 +159,16 @@ a.link:hover {
   flex: 0 1 48%;
 }
 
+.grid-col-2fr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3fr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .border-box {
   box-sizing: border-box;
 }

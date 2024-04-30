@@ -23,9 +23,7 @@ const favouriteTechnologies: [string, ComponentType][] = [
     non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
     I&apos;m currently working on
   </p>
-  <div
-    class="flex-row-center justify-content-evenly flex-wrap align-items-start gap-5 mt-10 w-75 margin-h-auto"
-  >
+  <div class="grid-col-2fr gap-5 mt-10 w-75 margin-h-auto">
     <List title="Favourite technologies">
       {#each favouriteTechnologies as [name, icon]}
         <li class="flex-row-center gap-3 fs-xl">
