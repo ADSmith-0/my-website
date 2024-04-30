@@ -7,12 +7,22 @@ import TypeScriptIcon from "$lib/icons/TypeScriptIcon.svelte";
 import type { ComponentType } from "svelte";
 import List from "./List.svelte";
 
-const favouriteTechnologies: [string, ComponentType][] = [
+const favouriteTechnologies: [name: string, icon: ComponentType][] = [
 	["Svelte", SvelteIcon],
 	["TypeScript", TypeScriptIcon],
 	["Neovim", NeovimIcon],
 	["Bash", BashIcon],
 ];
+
+const favouriteResources: [name: string, link: string][] = [
+	["Refactoring UI", "https://www.refactoringui.com/"],
+	["The Primeagen", "https://www.youtube.com/@ThePrimeTimeagen/videos"],
+	["MDN", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"],
+	["web.dev", "https://web.dev/learn/"],
+	["boot.dev", "https://www.boot.dev/"],
+];
+
+// FIX: Remove class="link" and replace it with default a styling
 </script>
 
 <Page id="about">
@@ -23,7 +33,7 @@ const favouriteTechnologies: [string, ComponentType][] = [
     non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
     I&apos;m currently working on
   </p>
-  <div class="grid-col-2fr gap-5 mt-10 w-75 margin-h-auto">
+  <div class="grid-col-3fr gap-5 mt-10 w-75 margin-h-auto">
     <List title="Favourite technologies">
       {#each favouriteTechnologies as [name, icon]}
         <li class="flex-row-center gap-3 fs-xl">
@@ -34,12 +44,26 @@ const favouriteTechnologies: [string, ComponentType][] = [
         </li>
       {/each}
     </List>
+    <List title="Favourite resources">
+      {#each favouriteResources as [name, link]}
+        <li class="fs-xl">
+          <a href={link} class="link" target="_blank" rel="noopener noreferrer"
+            >{name}</a
+          >
+        </li>
+      {/each}
+    </List>
     <List title="Currently learning">
-      <li class="fs-xl">
-        <a href="https://www.refactoringui.com/" class="link">Refactoring UI</a>
-      </li>
       <li class="fs-xl">Go lang</li>
-      <li class="fs-xl">The <strong>C</strong> programming language</li>
+      <li class="fs-xl">
+        <a
+          href="https://en.wikipedia.org/wiki/The_C_Programming_Language"
+          class="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >The <strong>C</strong> programming language</a
+        >
+      </li>
     </List>
   </div>
 </Page>
