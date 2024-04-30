@@ -39,17 +39,22 @@ let headerVisible = false;
     );
   "
 >
-  <h1 transition:typewriter on:introend={() => (headerVisible = true)}>
+  <h1
+    transition:typewriter
+    on:introend={() => (headerVisible = true)}
+    class="mb-10"
+  >
     Hi, I'm Adam
   </h1>
-  <span class="mt-10" style="flex: 0 1 100px;">
+  <span class="mt-10" style="flex: 0 1 200px;">
     {#if headerVisible}
       <p
         class="fs-xl text-secondary text-center"
         style="width: 25em;"
         transition:fly={{ y: 200, duration: 2000 }}
       >
-        I enjoy making interactive and visually stunning websites
+        I enjoy making interactive and visually stunning websites, web apps, and
+        mobile apps
       </p>
     {/if}
   </span>
