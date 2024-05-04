@@ -30,8 +30,8 @@ const favouriteLearningResources: [name: string, link: string][] = [
   <p class="mt-4 mb-10">
     I&apos;m a fullstack developer that enjoys learning new things and trying
     new technologies. I&apos;ve worked with lots of different projects, below is
-    non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
-    I&apos;m currently working on
+    a non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
+    I&apos;m currently working on:
   </p>
   <div class="grid-col-3fr gap-5 mt-10 w-75 margin-h-auto">
     <List title="Favourite technologies">
