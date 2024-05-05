@@ -23,7 +23,6 @@ const favouriteLearningResources: [name: string, link: string][] = [
 ];
 
 // FIX: Remove class="link" and replace it with default a styling
-// FIX: CHROME scroll doesn't work! Thank you Meri
 </script>
 
 <Page id="about">
