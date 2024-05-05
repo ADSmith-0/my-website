@@ -32,7 +32,7 @@ const favouriteLearningResources: [name: string, link: string][] = [
     I&apos;m a fullstack developer that enjoys learning new things and trying
     new technologies. I&apos;ve worked with lots of different projects, below is
     a non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
-    I&apos;m currently working on:
+    I&apos;m currently working on&colon;
   </p>
   <div class="grid-col-3fr gap-5 mt-10 w-75 margin-h-auto">
     <List title="Favourite technologies">
