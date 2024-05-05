@@ -29,16 +29,7 @@ const typewriter = (node: Node) => {
 let headerVisible = false;
 </script>
 
-<Page
-  id="home"
-  style="
-    background-image: radial-gradient(
-      circle at left bottom,
-      var(--orange--10),
-      var(--purple--10)
-    );
-  "
->
+<Page id="home">
   <h1
     transition:typewriter
     on:introend={() => (headerVisible = true)}
@@ -59,3 +50,23 @@ let headerVisible = false;
     {/if}
   </span>
 </Page>
+
+<style>
+  :global(#home) {
+    background-image: linear-gradient(
+      90deg,
+      var(--orange--10),
+      var(--purple--10)
+    );
+    background-size: 400%;
+    animation: move 5s infinite alternate;
+  }
+  @keyframes move {
+    from {
+      background-position: left center;
+    }
+    to {
+      background-position: right center;
+    }
+  }
+</style>
