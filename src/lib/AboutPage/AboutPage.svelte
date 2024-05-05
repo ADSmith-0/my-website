@@ -21,8 +21,6 @@ const favouriteLearningResources: [name: string, link: string][] = [
 	["web.dev", "https://web.dev/learn/"],
 	["boot.dev", "https://www.boot.dev/"],
 ];
-
-// FIX: Remove class="link" and replace it with default a styling
 </script>
 
 <Page id="about">
