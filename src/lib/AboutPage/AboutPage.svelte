@@ -65,6 +65,3 @@ const favouriteLearningResources: [name: string, link: string][] = [
     </List>
   </div>
 </Page>
-
-<style>
-</style>
