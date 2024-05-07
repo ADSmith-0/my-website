@@ -42,9 +42,6 @@ export let text: string;
       from var(--gradient-angle),
       var(--grey-900),
       var(--grey-500),
-      var(--grey-100),
-      var(--grey-900),
-      var(--grey-500),
       var(--grey-100)
     );
     animation: rotation 10s linear infinite;
