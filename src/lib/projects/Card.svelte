@@ -8,50 +8,53 @@ export let text: string;
   target="_blank"
   rel="noopener noreferrer"
   class="flex-row-center justify-content-center card p-5 gap-5 br-1 border-box cursor-pointer animated-border"
-  style="background: url(/grainy.svg), linear-gradient(90deg, var(--grey-950), var(--grey-950));"
 >
-  <slot name="image" />
-  <h3 class="p-2 fs-2xl text-shadow text-primary" style="flex: 0 1 50%;">
-    {text}
-  </h3>
+  <div class="flex-row-center justify-content-center">
+    <slot name="image" />
+    <h3 class="p-2 fs-2xl text-shadow text-primary" style="flex: 0 1 50%;">
+      {text}
+    </h3>
+  </div>
 </a>
 
 <style>
-  @property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
   .card {
-    width: var(--project-card-size);
-    height: 170px;
-  }
-  .animated-border {
     position: relative;
+    width: var(--project-card-size);
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
   }
-  .animated-border::before {
+  .card div {
+    position: absolute;
+    inset: 2px;
+    z-index: 10;
+    border-radius: inherit;
+    background: url(/grainy.svg),
+      linear-gradient(90deg, var(--grey-950), var(--grey-950));
+  }
+  .card::before,
+  .card::after {
     content: "";
     position: absolute;
-    inset: -2px;
-    z-index: -1;
+    width: 345px;
+    height: 345px;
     border-radius: inherit;
-    background: var(--grey-300);
+    background: transparent;
+    animation: rotate 6s linear infinite;
   }
-  .animated-border:hover::before {
-    background: conic-gradient(
-      from var(--gradient-angle),
-      var(--grey-900),
-      var(--grey-500),
-      var(--grey-100)
-    );
-    animation: rotation 10s linear infinite;
+  .card::after {
+    animation-delay: -3s;
   }
-  @keyframes rotation {
+  .card:hover::before,
+  .card:hover::after {
+    background: conic-gradient(transparent, transparent, transparent, #0cf);
+  }
+  @keyframes rotate {
     0% {
-      --gradient-angle: 0deg;
+      transform: rotate(0deg);
     }
     100% {
-      --gradient-angle: 360deg;
+      transform: rotate(360deg);
     }
   }
   .text-shadow {
