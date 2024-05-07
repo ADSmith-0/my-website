@@ -1,6 +1,7 @@
 <script lang="ts">
 export let link: string;
 export let text: string;
+export let borderColour = "#0cf";
 </script>
 
 <a
@@ -8,6 +9,7 @@ export let text: string;
   target="_blank"
   rel="noopener noreferrer"
   class="flex-row-center justify-content-center card p-5 gap-5 br-1 border-box cursor-pointer animated-border"
+  style:--border-colour={borderColour}
 >
   <div class="flex-row-center justify-content-center">
     <slot name="image" />
@@ -47,7 +49,12 @@ export let text: string;
   }
   .card:hover::before,
   .card:hover::after {
-    background: conic-gradient(transparent, transparent, transparent, #0cf);
+    background: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      var(--border-colour)
+    );
   }
   @keyframes rotate {
     0% {

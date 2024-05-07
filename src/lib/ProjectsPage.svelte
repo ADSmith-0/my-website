@@ -26,8 +26,8 @@ const components: Record<string, ComponentType> = {
 <Page id="projects">
   <h2 class="mv-10">Top Projects</h2>
   <div class="grid-col-3fr gap-10 justify-content" style="max-width: 996px;">
-    {#each data.projects as { name, link, icon, iconSize } (name)}
-      <Card {link} text={name}>
+    {#each data.projects as { name, link, icon, iconSize, borderColour } (name)}
+      <Card {link} text={name} {borderColour}>
         <span
           class="flex-row-center justify-content-center"
           style="height: {iconSize}px; width: {iconSize}px;"
