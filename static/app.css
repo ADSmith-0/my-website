@@ -23,6 +23,10 @@
   --purple: hsl(260 50% 40%);
   --purple--10: hsl(260 50% 40% / 10%);
 
+  --pink: hsl(328, 78%, 66%);
+  --blue: hsl(208, 68%, 51%);
+  --green: hsl(88, 68%, 51%);
+
   --font-size-s: 0.875rem;
   --font-size-m: 1rem;
   --font-size-l: 1.25rem;
@@ -136,11 +140,6 @@ a.link {
 
 a.link:hover {
   background-size: 100% 100%;
-}
-
-ul li {
-  padding-left: var(--spacing-2);
-  padding-right: var(--spacing-2);
 }
 
 .text-decoration-none {
