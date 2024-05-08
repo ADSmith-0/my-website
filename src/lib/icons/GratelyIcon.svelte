@@ -1,5 +1,4 @@
 <svg viewBox="0 0 80 80">
-  <rect x="4" y="4" width="90%" height="90%" fill="#ec65ad" rx="5px" ry="5px" />
   <g stroke="black" stroke-width="2" fill="white">
     <circle cx="25" cy="20" r="5" />
     <circle cx="55" cy="20" r="5" />
