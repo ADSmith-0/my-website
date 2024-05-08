@@ -1,6 +1,7 @@
 <script lang="ts">
 export let link: string;
 export let text: string;
+export let iconSize: number;
 export let borderColour = "#0cf";
 </script>
 
@@ -12,7 +13,12 @@ export let borderColour = "#0cf";
   style:--border-colour={borderColour}
 >
   <div class="flex-row-center justify-content-center gap-5">
-    <slot name="image" />
+    <span
+      class="flex-row-center justify-content-center"
+      style="height: {iconSize}px; width: {iconSize}px;"
+    >
+      <slot name="image" />
+    </span>
     <h3 class="p-2 fs-2xl text-shadow text-primary" style="flex: 0 1 50%;">
       {text}
     </h3>
