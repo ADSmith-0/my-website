@@ -8,10 +8,10 @@ export let borderColour = "#0cf";
   href={link}
   target="_blank"
   rel="noopener noreferrer"
-  class="flex-row-center justify-content-center card p-5 gap-5 br-1 border-box cursor-pointer animated-border"
+  class="flex-row-center justify-content-center card p-5 br-1 border-box cursor-pointer animated-border"
   style:--border-colour={borderColour}
 >
-  <div class="flex-row-center justify-content-center">
+  <div class="flex-row-center justify-content-center gap-5">
     <slot name="image" />
     <h3 class="p-2 fs-2xl text-shadow text-primary" style="flex: 0 1 50%;">
       {text}
