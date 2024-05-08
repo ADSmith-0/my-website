@@ -25,6 +25,10 @@ export let borderColour = "#0cf";
     width: var(--project-card-size);
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    transition: transform 0.2s linear;
+  }
+  .card:hover {
+    transform: scale(1.05);
   }
   .card div {
     position: absolute;
@@ -41,7 +45,7 @@ export let borderColour = "#0cf";
     width: 345px;
     height: 345px;
     border-radius: inherit;
-    background: transparent;
+    background: var(--border-colour);
     animation: rotate 6s linear infinite;
   }
   .card::after {
@@ -49,12 +53,7 @@ export let borderColour = "#0cf";
   }
   .card:hover::before,
   .card:hover::after {
-    background: conic-gradient(
-      transparent,
-      transparent,
-      transparent,
-      var(--border-colour)
-    );
+    background: conic-gradient(transparent, transparent, var(--border-colour));
   }
   @keyframes rotate {
     0% {
