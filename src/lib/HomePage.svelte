@@ -44,8 +44,8 @@ let headerVisible = false;
         style="width: 25em;"
         transition:fly={{ y: 200, duration: 2000 }}
       >
-        I enjoy making interactive and visually stunning websites, web apps, and
-        mobile apps
+        I enjoy making websites, web apps, mobile apps and tinkering around with
+        code
       </p>
     {/if}
   </span>
