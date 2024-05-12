@@ -1,3 +1,6 @@
 export const updateHash = (newHash: string): void => {
-  window.location.hash = newHash;
+  if (!newHash) {
+    window.location.hash = newHash;
+  }
+  window.location.hash = `#${newHash}`;
 };

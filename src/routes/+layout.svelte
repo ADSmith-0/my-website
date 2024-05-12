@@ -55,7 +55,7 @@ onMount(() => {
 	const intersectionCallback: IntersectionObserverCallback = (entries) => {
 		for (const entry of entries) {
 			if (entry.isIntersecting) {
-				updateHash(`#${entry.target.id}`);
+				updateHash(entry.target.id);
 			}
 		}
 	};
