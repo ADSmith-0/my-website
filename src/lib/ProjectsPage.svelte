@@ -25,11 +25,19 @@ const components: Record<string, ComponentType> = {
 
 <Page id="projects">
   <h2 class="mv-10">Top Projects</h2>
-  <div class="grid-col-3fr gap-10 justify-content" style="max-width: 996px;">
+  <div
+    class="grid-col-3fr gap-10 justify-content-center"
+    style="max-width: 996px;"
+  >
     {#each data.projects as { name, link, icon, iconSize, borderColour } (name)}
       <Card {link} text={name} {borderColour} {iconSize}>
         <svelte:component this={components[icon]} slot="image" />
       </Card>
     {/each}
+    <a
+      href="/projects"
+      class="link fs-2xl"
+      style="align-self: center; justify-self: center;">All Projects ></a
+    >
   </div>
 </Page>
