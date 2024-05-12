@@ -1,4 +1,4 @@
-<svg viewBox="0 0 100 100">
+<svg viewBox="-2 -2 105 105">
   <g stroke-width="4" stroke="white" fill="var(--grey-950)">
     <path
       d="M 15 90 L 50 10 L 70 55 L 30 55 L 70 55 L 85 90"
