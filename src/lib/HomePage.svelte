@@ -53,20 +53,6 @@ let headerVisible = false;
 
 <style>
   :global(#home) {
-    background-image: linear-gradient(
-      90deg,
-      var(--orange--10),
-      var(--purple--10)
-    );
-    background-size: 400%;
-    animation: move 5s infinite alternate;
-  }
-  @keyframes move {
-    from {
-      background-position: left center;
-    }
-    to {
-      background-position: right center;
-    }
+    background-image: linear-gradient(135deg, #667eea30 0%, #764ba230 100%);
   }
 </style>
