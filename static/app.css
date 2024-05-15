@@ -105,6 +105,14 @@ a:visited {
   color: var(--grey-200);
 }
 
+button {
+  background: none;
+  border: none;
+  color: var(--grey-200);
+  cursor: pointer;
+  font-size: var(--font-size-m);
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
