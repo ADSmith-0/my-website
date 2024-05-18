@@ -6,17 +6,18 @@ import { onMount } from "svelte";
 const pages = ["home", "projects", "about"] as const;
 type Pages = (typeof pages)[number];
 
-let currentPage: Pages = "home";
-let scrollY: number;
-let underlineWidth = "0px";
-let underlineOffsetX = "0px";
-let highlightedNavItem: HTMLButtonElement;
-
 const labelsFromPage: Record<Pages, string> = {
 	home: "Home",
 	projects: "Projects",
 	about: "About me",
 };
+
+let currentPage: Pages = "home";
+let scrollY: number;
+let navMenu: HTMLElement;
+let underlineWidth = "0px";
+let underlineOffsetX = "0px";
+let highlightedNavItem: HTMLButtonElement;
 
 const navFocus = (event: MouseEvent | FocusEvent) => {
 	const element = event.target as HTMLAnchorElement;
@@ -36,34 +37,9 @@ $: if (browser && currentPage && highlightedNavItem) {
 }
 
 onMount(() => {
-	const intersectionCallback: IntersectionObserverCallback = (entries) => {
-		for (const entry of entries) {
-			if (entry.isIntersecting) {
-				currentPage = entry.target.id as Pages;
-			}
-		}
-	};
-
-	const observer = new IntersectionObserver(intersectionCallback, {
-		root: null,
-		threshold: 0.95,
-	});
-
-	const home = document.getElementById("home") ?? new Element();
-	observer.observe(home);
-
-	const projects = document.getElementById("projects") ?? new Element();
-	observer.observe(projects);
-
-	const about = document.getElementById("about") ?? new Element();
-	observer.observe(about);
-
 	const timeout = setTimeout(resetUnderline, 50);
 
 	return () => {
-		observer.unobserve(home);
-		observer.unobserve(projects);
-		observer.unobserve(about);
 		clearTimeout(timeout);
 	};
 });
@@ -77,14 +53,26 @@ const updateCurrentPage = (
 		page.scrollIntoView();
 	}
 };
+
+const scrollend = () => {
+	const page = document.elementFromPoint(50, navMenu.offsetHeight + 2);
+	if (page) {
+		currentPage = page.id as Pages;
+	}
+};
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight={$height} />
+<svelte:window
+  bind:scrollY
+  bind:innerHeight={$height}
+  on:scrollend={scrollend}
+/>
 
 <div id="content-container">
   <div
     class="fixed top-0 w-100 pb-8 bg-transparent z-max {scrollY > 0 &&
       'bb-1 bg-grey-950 border-grey-800'}"
+    bind:this={navMenu}
   >
     <nav
       class="flex-row-center relative gap-10 pl-10 pt-8 nav-menu"
