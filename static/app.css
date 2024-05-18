@@ -61,7 +61,7 @@
   --dimensions-10: 750px;
 
   color: var(--grey-200);
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 
   --grid-size: 22px;
   --grid-colour-1: var(--grey-900-50);
