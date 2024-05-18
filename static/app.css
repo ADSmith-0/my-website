@@ -63,11 +63,12 @@
   color: var(--grey-200);
   scroll-behavior: smooth;
 
-  --grid-size: 22px;
+  --grid-size: 70px;
   --grid-colour-1: var(--grey-900-50);
-  --grid-colour-2: var(--grey-900);
+  --grid-colour-2: var(--grey-900-50);
 
-  background: repeating-linear-gradient(0deg, var(--grid-colour-1) 1px 2px, transparent 2px var(--grid-size), var(--grid-colour-1) var(--grid-size) calc(var(--grid-size) + 1px), transparent calc(var(--grid-size) + 1px) calc(var(--grid-size) * 2), var(--grid-colour-2) calc(var(--grid-size) * 2) calc(var(--grid-size) * 2 + 1px), transparent calc(var(--grid-size) * 2 + 1px) calc(var(--grid-size) * 3)), repeating-linear-gradient(90deg, var(--grid-colour-1) 1px 2px, transparent 2px var(--grid-size), var(--grid-colour-1) var(--grid-size) calc(var(--grid-size) + 1px), transparent calc(var(--grid-size) + 1px) calc(var(--grid-size) * 2), var(--grid-colour-2) calc(var(--grid-size) * 2) calc(var(--grid-size) * 2 + 1px), transparent calc(var(--grid-size) * 2 + 1px) calc(var(--grid-size) * 3)), var(--grey-950);
+  /* background: repeating-linear-gradient(0deg, var(--grid-colour-1) 1px 2px, transparent 2px var(--grid-size), var(--grid-colour-1) var(--grid-size) calc(var(--grid-size) + 1px), transparent calc(var(--grid-size) + 1px) calc(var(--grid-size) * 2), var(--grid-colour-2) calc(var(--grid-size) * 2) calc(var(--grid-size) * 2 + 1px), transparent calc(var(--grid-size) * 2 + 1px) calc(var(--grid-size) * 3)), repeating-linear-gradient(90deg, var(--grid-colour-1) 1px 2px, transparent 2px var(--grid-size), var(--grid-colour-1) var(--grid-size) calc(var(--grid-size) + 1px), transparent calc(var(--grid-size) + 1px) calc(var(--grid-size) * 2), var(--grid-colour-2) calc(var(--grid-size) * 2) calc(var(--grid-size) * 2 + 1px), transparent calc(var(--grid-size) * 2 + 1px) calc(var(--grid-size) * 3)), var(--grey-950); */
+  background: repeating-linear-gradient(0deg, var(--grid-colour-2) 1px 2px, transparent 2px var(--grid-size)), repeating-linear-gradient(90deg, var(--grid-colour-2) 1px 2px, transparent 2px var(--grid-size)), var(--grey-950);
 }
 
 .bg-grey-950 {
