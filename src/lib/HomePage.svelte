@@ -1,6 +1,7 @@
 <script lang="ts">
 import { fly } from "svelte/transition";
 import Page from "./Page.svelte";
+import { onMount } from "svelte";
 
 const typewriter = (node: Node) => {
 	const speed = 1;
@@ -27,28 +28,41 @@ const typewriter = (node: Node) => {
 };
 
 let headerVisible = false;
+let subtitleVisible = false;
+
+onMount(() => {
+	const timer = setTimeout(() => {
+		headerVisible = true;
+	}, 50);
+
+	return () => {
+		clearTimeout(timer);
+	};
+});
 </script>
 
 <Page id="home">
-  <h1
-    transition:typewriter
-    on:introend={() => (headerVisible = true)}
-    class="mb-10"
-  >
-    Hi, I'm Adam
-  </h1>
-  <span class="mt-10" style="flex: 0 1 200px;">
-    {#if headerVisible}
-      <p
-        class="fs-xl text-secondary text-center"
-        style="width: 25em;"
-        transition:fly={{ y: 200, duration: 2000 }}
-      >
-        I enjoy making websites, web apps, mobile apps and tinkering around with
-        code
-      </p>
-    {/if}
-  </span>
+  {#if headerVisible}
+    <h1
+      transition:typewriter
+      on:introend={() => (subtitleVisible = true)}
+      class="mb-10"
+    >
+      Hi, I'm Adam
+    </h1>
+    <span class="mt-10" style="flex: 0 1 200px;">
+      {#if subtitleVisible}
+        <p
+          class="fs-xl text-secondary text-center"
+          style="width: 25em;"
+          in:fly={{ y: 200, duration: 2000 }}
+        >
+          I enjoy making websites, web apps, mobile apps and tinkering around
+          with code
+        </p>
+      {/if}
+    </span>
+  {/if}
 </Page>
 
 <style>
