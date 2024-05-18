@@ -44,6 +44,9 @@ export let borderColour = "#0cf";
     background: url(/grainy.svg),
       linear-gradient(90deg, var(--grey-950), var(--grey-950));
   }
+  .card:hover div {
+    transform: translateX(0.5px);
+  }
   .card::before,
   .card::after {
     content: "";
