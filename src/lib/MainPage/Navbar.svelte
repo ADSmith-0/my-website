@@ -1,95 +1,82 @@
 <script lang="ts">
-  import { height } from "$lib/stores";
-  import { onMount } from "svelte";
-  import { browser } from "$app/environment";
+import { browser } from "$app/environment";
+import { height } from "$lib/stores";
+import { onMount } from "svelte";
 
-  const pages = ["home", "projects", "about"] as const;
-  type Pages = (typeof pages)[number];
+const pages = ["home", "projects", "about"] as const;
+type Pages = (typeof pages)[number];
 
-  let currentPage: Pages = "home";
+let currentPage: Pages = "home";
+let scrollY: number;
+let underlineWidth = "0px";
+let underlineOffsetX = "0px";
+let highlightedNavItem: HTMLButtonElement;
 
-  const labelsFromPage: Record<Pages, string> = {
-    home: "Home",
-    projects: "Projects",
-    about: "About me",
-  };
+const labelsFromPage: Record<Pages, string> = {
+	home: "Home",
+	projects: "Projects",
+	about: "About me",
+};
 
-  let navMenu: HTMLElement;
+const navFocus = (event: MouseEvent | FocusEvent) => {
+	const element = event.target as HTMLAnchorElement;
+	if (element?.classList.contains("nav-item")) {
+		underlineWidth = `${element.offsetWidth}px`;
+		underlineOffsetX = `${element.offsetLeft}px`;
+	}
+};
 
-  const navFocus = (event: MouseEvent | FocusEvent) => {
-    const element = event.target as HTMLAnchorElement;
-    if (navMenu && element && element.classList.contains("nav-item")) {
-      navMenu.style.setProperty(
-        "--underline-width",
-        `${element.offsetWidth}px`,
-      );
-      navMenu.style.setProperty(
-        "--underline-offset-x",
-        `${element.offsetLeft}px`,
-      );
-    }
-  };
+const resetUnderline = () => {
+	underlineWidth = `${highlightedNavItem.offsetWidth}px`;
+	underlineOffsetX = `${highlightedNavItem.offsetLeft}px`;
+};
 
-  const resetUnderline = () => {
-    if (browser && navMenu) {
-      const highlightedLink = document.querySelector(
-        ".highlighted",
-      ) as HTMLElement;
-      if (highlightedLink) {
-        navMenu.style.setProperty(
-          "--underline-width",
-          `${highlightedLink.offsetWidth}px`,
-        );
-        navMenu.style.setProperty(
-          "--underline-offset-x",
-          `${highlightedLink.offsetLeft}px`,
-        );
-      }
-    }
-  };
+$: if (browser && currentPage && highlightedNavItem) {
+	resetUnderline();
+}
 
-  $: currentPage && resetUnderline();
+onMount(() => {
+	const intersectionCallback: IntersectionObserverCallback = (entries) => {
+		for (const entry of entries) {
+			if (entry.isIntersecting) {
+				currentPage = entry.target.id as Pages;
+			}
+		}
+	};
 
-  onMount(() => {
-    const intersectionCallback: IntersectionObserverCallback = (entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          currentPage = entry.target.id as Pages;
-        }
-      }
-    };
+	const observer = new IntersectionObserver(intersectionCallback, {
+		root: null,
+		threshold: 0.95,
+	});
 
-    const observer = new IntersectionObserver(intersectionCallback, {
-      root: null,
-      threshold: 0.95,
-    });
+	const home = document.getElementById("home") ?? new Element();
+	observer.observe(home);
 
-    const home = document.getElementById("home") ?? new Element();
-    observer.observe(home);
+	const projects = document.getElementById("projects") ?? new Element();
+	observer.observe(projects);
 
-    const projects = document.getElementById("projects") ?? new Element();
-    observer.observe(projects);
+	const about = document.getElementById("about") ?? new Element();
+	observer.observe(about);
 
-    const about = document.getElementById("about") ?? new Element();
-    observer.observe(about);
+	const timeout = setTimeout(resetUnderline, 50);
 
-    const timeout = setTimeout(resetUnderline, 50);
+	return () => {
+		observer.unobserve(home);
+		observer.unobserve(projects);
+		observer.unobserve(about);
+		clearTimeout(timeout);
+	};
+});
 
-    return () => {
-      observer.unobserve(home);
-      observer.unobserve(projects);
-      observer.unobserve(about);
-      clearTimeout(timeout);
-    };
-  });
-
-  let scrollY: number;
-
-  const updateCurrentPage = (
-    event: MouseEvent & { currentTarget: HTMLButtonElement },
-  ): void => {
-    currentPage = event.currentTarget.getAttribute("data-page") as Pages;
-  };
+const updateCurrentPage = (
+	event: MouseEvent & { currentTarget: HTMLButtonElement },
+): void => {
+	currentPage = event.currentTarget.getAttribute("data-page") as Pages;
+	const page = document.getElementById(currentPage);
+	if (page) {
+		page.scrollIntoView();
+	}
+};
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight={$height} />
@@ -105,15 +92,24 @@
       on:mouseleave={resetUnderline}
       on:focus={navFocus}
       on:blur={resetUnderline}
-      bind:this={navMenu}
+      style:--underline-width={underlineWidth}
+      style:--underline-offset-x={underlineOffsetX}
     >
       {#each pages as page (page)}
-        <button
-          data-page={page}
-          class="nav-item pb-2"
-          class:highlighted={page === currentPage}
-          on:click={updateCurrentPage}>{labelsFromPage[page]}</button
-        >
+        {#if page === currentPage}
+          <button
+            data-page={page}
+            class="nav-item pb-2 highlighted"
+            bind:this={highlightedNavItem}
+            on:click={updateCurrentPage}>{labelsFromPage[page]}</button
+          >
+        {:else}
+          <button
+            data-page={page}
+            class="nav-item pb-2"
+            on:click={updateCurrentPage}>{labelsFromPage[page]}</button
+          >
+        {/if}
       {/each}
     </nav>
   </div>
