@@ -55,7 +55,7 @@ const updateCurrentPage = (
 };
 
 const scrollend = () => {
-	const page = document.elementFromPoint(50, navMenu.offsetHeight + 2);
+	const page = document.elementFromPoint(50, navMenu.offsetHeight + 20);
 	if (page) {
 		currentPage = page.id as Pages;
 	}
