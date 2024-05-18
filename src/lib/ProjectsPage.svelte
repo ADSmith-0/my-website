@@ -34,10 +34,8 @@ const components: Record<string, ComponentType> = {
         <svelte:component this={components[icon]} slot="image" />
       </Card>
     {/each}
-    <a
-      href="/projects"
-      class="link fs-2xl"
-      style="align-self: center; justify-self: center;">All Projects ></a
+    <a href="/projects" class="link fs-2xl" style="place-self: center;"
+      >All Projects ></a
     >
   </div>
 </Page>
