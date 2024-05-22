@@ -41,8 +41,7 @@ export let borderColour = "#0cf";
     inset: 2px;
     z-index: 10;
     border-radius: inherit;
-    background: url(/grainy.svg),
-      linear-gradient(90deg, var(--grey-950), var(--grey-950));
+    background: radial-gradient(var(--grey-900), var(--grey-950));
   }
   .card:hover div {
     transform: translateX(0.5px);
