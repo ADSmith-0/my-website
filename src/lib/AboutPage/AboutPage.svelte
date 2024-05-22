@@ -25,7 +25,7 @@ const favouriteLearningResources: [name: string, link: string][] = [
 
 <Page id="about">
   <h2>About me</h2>
-  <p class="mt-4 mb-10">
+  <p class="mt-4 mb-10 fs-l">
     I&apos;m a fullstack developer that enjoys learning new things and trying
     new technologies. I&apos;ve worked with lots of different projects, below is
     a non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
