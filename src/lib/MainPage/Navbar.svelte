@@ -72,6 +72,7 @@ const scrollend = () => {
   <div
     class="fixed top-0 w-100 pb-8 bg-transparent z-max {scrollY > 0 &&
       'bb-1 bg-grey-950 border-grey-800'}"
+    class:bg-alt={scrollY > 0}
     bind:this={navMenu}
   >
     <nav
@@ -122,6 +123,12 @@ const scrollend = () => {
     transition:
       transform 0.4s,
       width 0.4s;
+  }
+  .bg-alt {
+    border-bottom: var(--spacing-1) solid var(--grey-800);
+    box-shadow: 0 0 var(--spacing-4) var(--spacing-1) var(--grey-950-25);
+    background: var(--grey-900-50);
+    backdrop-filter: blur(var(--spacing-5));
   }
   .highlighted {
     font-weight: bolder;

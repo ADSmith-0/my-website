@@ -15,6 +15,7 @@
   --grey-900: hsl(30 2% 20%);
   --grey-900-50: hsla(30 2% 20% / 50%);
   --grey-950: hsl(0 0% 14%);
+  --grey-950-25: hsl(0 0% 14% / 25%);
 
   --orange: hsl(22 84% 60%);
   --orange--10: hsla(22 84% 60% / 10%);
@@ -67,7 +68,6 @@
   --grid-colour-1: var(--grey-900-50);
   --grid-colour-2: var(--grey-900-50);
 
-  /* background: repeating-linear-gradient(0deg, var(--grid-colour-1) 1px 2px, transparent 2px var(--grid-size), var(--grid-colour-1) var(--grid-size) calc(var(--grid-size) + 1px), transparent calc(var(--grid-size) + 1px) calc(var(--grid-size) * 2), var(--grid-colour-2) calc(var(--grid-size) * 2) calc(var(--grid-size) * 2 + 1px), transparent calc(var(--grid-size) * 2 + 1px) calc(var(--grid-size) * 3)), repeating-linear-gradient(90deg, var(--grid-colour-1) 1px 2px, transparent 2px var(--grid-size), var(--grid-colour-1) var(--grid-size) calc(var(--grid-size) + 1px), transparent calc(var(--grid-size) + 1px) calc(var(--grid-size) * 2), var(--grid-colour-2) calc(var(--grid-size) * 2) calc(var(--grid-size) * 2 + 1px), transparent calc(var(--grid-size) * 2 + 1px) calc(var(--grid-size) * 3)), var(--grey-950); */
   background: repeating-linear-gradient(0deg, var(--grid-colour-2) 1px 2px, transparent 2px var(--grid-size)), repeating-linear-gradient(90deg, var(--grid-colour-2) 1px 2px, transparent 2px var(--grid-size)), var(--grey-950);
 }
 
@@ -227,6 +227,10 @@ a.link:hover {
   margin-left: auto;
 }
 
+.fs-l {
+  font-size: var(--font-size-l);
+}
+
 .fs-xl {
   font-size: var(--font-size-xl);
 }
@@ -299,6 +303,10 @@ a.link:hover {
 
 .br-1 {
   border-radius: var(--spacing-2);
+}
+
+.br-2 {
+  border-radius: var(--spacing-4);
 }
 
 .br-border {
