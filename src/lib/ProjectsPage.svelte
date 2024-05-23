@@ -35,7 +35,7 @@ const components: Record<string, ComponentType> = {
       </Card>
     {/each}
     <a href="/projects" class="link fs-2xl" style="place-self: center;"
-      >All Projects ></a
+      >More ></a
     >
   </div>
 </Page>
