@@ -34,8 +34,8 @@ const favouriteLearningResources: [name: string, link: string][] = [
   <div class="grid-col-3fr gap-8 mt-10 w-75 margin-h-auto">
     <List
       title="Favourite technologies"
-      backgroundColour1="limegreen"
-      backgroundColour2="goldenrod"
+      backgroundColourStart="crimson"
+      backgroundColourEnd="darkorange"
     >
       {#each favouriteTechnologies as [name, icon]}
         <li class="flex-row-center gap-3 fs-xl">
@@ -48,8 +48,8 @@ const favouriteLearningResources: [name: string, link: string][] = [
     </List>
     <List
       title="Favourite learning resources"
-      backgroundColour1="crimson"
-      backgroundColour2="dodgerblue"
+      backgroundColourStart="springgreen"
+      backgroundColourEnd="turquoise"
     >
       {#each favouriteLearningResources as [name, link]}
         <li class="fs-xl">
@@ -61,8 +61,8 @@ const favouriteLearningResources: [name: string, link: string][] = [
     </List>
     <List
       title="Currently learning"
-      backgroundColour1="blue"
-      backgroundColour2="purple"
+      backgroundColourStart="darkviolet"
+      backgroundColourEnd="hotpink"
     >
       <li class="fs-xl">Go lang</li>
       <li class="fs-xl">

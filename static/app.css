@@ -18,12 +18,9 @@
   --grey-950-25: hsl(0 0% 14% / 25%);
 
   --orange: hsl(22 84% 60%);
-  --orange--10: hsla(22 84% 60% / 10%);
-  --orange--20: hsla(22 84% 60% / 20%);
+  --orange--40: hsla(22 84% 60% / 40%);
 
   --purple: hsl(260 50% 40%);
-  --purple--10: hsl(260 50% 40% / 10%);
-  --purple--20: hsl(260 50% 40% / 20%);
 
   --pink: hsl(328, 78%, 66%);
   --blue: hsl(208, 68%, 51%);
@@ -137,7 +134,7 @@ button {
 
 a.link {
   position: relative;
-  background-image: linear-gradient(var(--orange--20) 0 0);
+  background-image: linear-gradient(var(--orange--40) 0 0);
   background-position: 0 100%;
   background-size: 100% 20%;
   background-repeat: no-repeat;

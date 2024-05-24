@@ -1,13 +1,13 @@
 <script lang="ts">
 export let title: string;
-export let backgroundColour1: string;
-export let backgroundColour2: string;
+export let backgroundColourStart: string;
+export let backgroundColourEnd: string;
 </script>
 
 <div
   class="flex-column-center justify-content-start align-items-start bg-grey-950 flex-50 border-box border-2 border-grey-400 br-1 list-item p-8"
-  style:--background-colour-1={backgroundColour1}
-  style:--background-colour-2={backgroundColour2}
+  style:--background-colour-start={backgroundColourStart}
+  style:--background-colour-end={backgroundColourEnd}
 >
   <h3 class="fs-l text-secondary mb-3">{title}</h3>
   <ul class="list flex-column-center align-items-start gap-5">
@@ -25,23 +25,13 @@ export let backgroundColour2: string;
   .list-item::before {
     content: "";
     position: absolute;
-    inset: -20px;
+    inset: calc(-1 * var(--spacing-6));
     border-radius: inherit;
     background: linear-gradient(
       135deg,
-      var(--background-colour-1),
-      var(--background-colour-2)
+      var(--background-colour-start),
+      var(--background-colour-end)
     );
-    /* background: linear-gradient( */
-    /*   135deg, */
-    /*   red, */
-    /*   orange, */
-    /*   yellow, */
-    /*   green, */
-    /*   blue, */
-    /*   indigo, */
-    /*   violet */
-    /* ); */
     box-shadow: inset 0 0 var(--spacing-3) var(--spacing-5) var(--grey-950);
     z-index: -1;
   }
