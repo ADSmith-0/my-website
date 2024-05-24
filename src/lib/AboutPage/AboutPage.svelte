@@ -31,8 +31,12 @@ const favouriteLearningResources: [name: string, link: string][] = [
     a non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
     I&apos;m currently working on&colon;
   </p>
-  <div class="grid-col-3fr gap-5 mt-10 w-75 margin-h-auto">
-    <List title="Favourite technologies">
+  <div class="grid-col-3fr gap-8 mt-10 w-75 margin-h-auto">
+    <List
+      title="Favourite technologies"
+      backgroundColour1="limegreen"
+      backgroundColour2="goldenrod"
+    >
       {#each favouriteTechnologies as [name, icon]}
         <li class="flex-row-center gap-3 fs-xl">
           <div style="display: inline-block; width: 30px; height: 30px;">
@@ -42,7 +46,11 @@ const favouriteLearningResources: [name: string, link: string][] = [
         </li>
       {/each}
     </List>
-    <List title="Favourite learning resources">
+    <List
+      title="Favourite learning resources"
+      backgroundColour1="crimson"
+      backgroundColour2="dodgerblue"
+    >
       {#each favouriteLearningResources as [name, link]}
         <li class="fs-xl">
           <a href={link} class="link" target="_blank" rel="noopener noreferrer"
@@ -51,7 +59,11 @@ const favouriteLearningResources: [name: string, link: string][] = [
         </li>
       {/each}
     </List>
-    <List title="Currently learning">
+    <List
+      title="Currently learning"
+      backgroundColour1="blue"
+      backgroundColour2="purple"
+    >
       <li class="fs-xl">Go lang</li>
       <li class="fs-xl">
         <a

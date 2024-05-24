@@ -309,14 +309,14 @@ a.link:hover {
   border-radius: var(--spacing-4);
 }
 
-.br-border {
-  border-radius: var(--spacing-3);
-}
-
 .bb-1 {
   border-width: 0;
   border-bottom-width: 1px;
   border-style: solid;
+}
+
+.border-grey-400 {
+  border-color: var(--grey-400);
 }
 
 .border-grey-600 {
