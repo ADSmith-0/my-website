@@ -19,7 +19,6 @@ const favouriteLearningResources: [name: string, link: string][] = [
 	["The Primeagen", "https://www.youtube.com/@ThePrimeTimeagen/videos"],
 	["MDN", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"],
 	["web.dev", "https://web.dev/learn/"],
-	["boot.dev", "https://www.boot.dev/"],
 ];
 </script>
 
