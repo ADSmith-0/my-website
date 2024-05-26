@@ -5,7 +5,7 @@ export let backgroundColourEnd: string;
 </script>
 
 <div
-  class="flex-column-center justify-content-start align-items-start bg-grey-950 flex-50 border-box br-1 list-item p-8"
+  class="flex-column-center justify-content-start align-items-start m-h-7 bg-grey-950 flex-50 border-box br-1 list-item p-8"
   style:--background-colour-start={backgroundColourStart}
   style:--background-colour-end={backgroundColourEnd}
 >
