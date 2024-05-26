@@ -54,7 +54,7 @@ onMount(() => {
       {#if subtitleVisible}
         <p
           class="fs-xl text-secondary text-center"
-          style="width: 25em;"
+          style="max-width: 25em;"
           in:fly={{ y: 200, duration: 2000 }}
         >
           I enjoy making websites, web apps, mobile apps and tinkering around
