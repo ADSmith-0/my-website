@@ -29,13 +29,16 @@ const components: Record<string, ComponentType> = {
     class="grid-col-3fr gap-10 justify-content-center"
     style="max-width: 996px;"
   >
-    {#each data.projects as { name, link, icon, iconSize, borderColour } (name)}
-      <Card {link} text={name} {borderColour} {iconSize}>
+    {#each data.projects as { name, link, projectLink, icon, iconSize, colour } (name)}
+      <Card
+        link={projectLink ?? link}
+        text={name}
+        borderColour={colour}
+        {iconSize}
+      >
         <svelte:component this={components[icon]} slot="image" />
       </Card>
     {/each}
-    <a href="/projects" class="link fs-2xl" style="place-self: center;"
-      >More ></a
-    >
+    <a href="/projects/grately" class="link fs-2xl place-self-center">More ></a>
   </div>
 </Page>

@@ -172,6 +172,10 @@ a.link:hover {
   flex: 0 1 48%;
 }
 
+.grid {
+  display: grid;
+}
+
 .grid-col-2fr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -180,6 +184,10 @@ a.link:hover {
 .grid-col-3fr {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.place-self-center {
+  place-self: center;
 }
 
 @media (max-width: 1020px) {
