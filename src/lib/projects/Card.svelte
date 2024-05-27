@@ -3,6 +3,7 @@ export let link: string;
 export let text: string;
 export let iconSize: number;
 export let borderColour = "#0cf";
+// FIX: https://www.youtube.com/watch?v=fcnDBP3k3BE - Change border with this
 </script>
 
 <a
