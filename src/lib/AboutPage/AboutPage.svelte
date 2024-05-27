@@ -22,7 +22,7 @@ const favouriteLearningResources: [name: string, link: string][] = [
 ];
 </script>
 
-<Page id="about">
+<Page id="about" className="mt-10">
   <h2>About me</h2>
   <p class="mt-4 mb-10 fs-l">
     I&apos;m a fullstack developer that enjoys learning new things and trying
@@ -30,7 +30,10 @@ const favouriteLearningResources: [name: string, link: string][] = [
     a non&hyphen;exhaustive list of things that I&apos;ve enjoyed and what
     I&apos;m currently working on&colon;
   </p>
-  <div class="grid-col-3fr gap-8 mt-10 w-75 margin-h-auto">
+  <div
+    class="grid-col-3fr gap-8 mt-10 w-75 margin-h-auto"
+    style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))"
+  >
     <List
       title="Favourite technologies"
       backgroundColourStart="crimson"

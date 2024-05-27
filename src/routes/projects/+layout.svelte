@@ -13,6 +13,6 @@ export let data: PageData;
     </div>
   </aside>
   <main>
-    <slot />
+    <slot {data} />
   </main>
 </div>
