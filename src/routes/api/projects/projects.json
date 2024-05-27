@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Grately",
+    "tags": [
+      "React Native",
+      "Firebase"
+    ],
+    "link": "grately",
+    "projectLink": "",
+    "githubLink": "",
+    "icon": "GratelyIcon",
+    "iconSize": 80,
+    "colour": "#ec65ad"
+  },
+  {
+    "name": "Chess",
+    "tags": [
+      "web components API",
+      "OOP"
+    ],
+    "link": "chess",
+    "projectLink": "https://vanilla-js-chess-v1.netlify.app/",
+    "githubLink": "https://github.com/ADSmith-0/vanilla-js-chess",
+    "icon": "ChessIcon",
+    "iconSize": 65,
+    "colour": "#0cf"
+  },
+  {
+    "name": "Neovim config",
+    "tags": [
+      "Lua",
+      "Neovim",
+      "Vim"
+    ],
+    "link": "nvim-config",
+    "projectLink": "",
+    "githubLink": "https://github.com/ADSmith-0/Nvim-config",
+    "icon": "NeovimIcon",
+    "iconSize": 50,
+    "colour": "#2f0"
+  },
+  {
+    "name": "Portfolio Website",
+    "tags": [
+      "Sveltekit"
+    ],
+    "link": "my-website",
+    "projectLink": "https://portfolio-website-adamsmith.netlify.app/",
+    "githubLink": "https://github.com/ADSmith-0/my-website",
+    "icon": "SvelteIcon",
+    "iconSize": 70,
+    "colour": "#f50"
+  },
+  {
+    "name": "Artist Network",
+    "tags": [
+      "React",
+      "Express",
+      "Node.js",
+      "Neo4j",
+      "OAuth2.0"
+    ],
+    "link": "artist-network",
+    "projectLink": "",
+    "githubLink": "https://github.com/ADSmith-0/Artist-Network",
+    "icon": "ArtistNetworkIcon",
+    "iconSize": 70,
+    "colour": "#fff"
+  },
+  {
+    "name": "JS Patterns",
+    "tags": [
+      "JavaScript"
+    ],
+    "link": "js-patterns",
+    "projectLink": "",
+    "githubLink": "https://github.com/ADSmith-0/test-js",
+    "icon": "JavaScriptIcon",
+    "iconSize": 50,
+    "colour": "#f0db4f"
+  },
+  {
+    "name": "Pokedex",
+    "tags": [
+      "React, API"
+    ],
+    "link": "pokedex",
+    "projectLink": "https://pokedex001.netlify.app/",
+    "githubLink": "https://github.com/ADSmith-0/pokedex",
+    "icon": "PokedexIcon",
+    "iconSize": 70,
+    "colour": "#f00"
+  },
+  {
+    "name": "Traversy JS Challenges",
+    "tags": [
+      "html"
+    ],
+    "link": "traversy-js-challenges",
+    "projectLink": "",
+    "githubLink": "https://github.com/ADSmith-0/traversy-js-challenges",
+    "icon": "JavaScriptIcon",
+    "iconSize": 50,
+    "colour": "#f0db4f"
+  }
+]
