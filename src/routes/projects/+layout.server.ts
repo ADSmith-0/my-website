@@ -1,7 +1,10 @@
-import type { PageServerLoad } from "../$types";
+import type { LayoutServerLoad } from "./$types";
+import type { Project } from "$lib/types";
 
-export const load: PageServerLoad = async ({ fetch }) => {
-  const projects = await fetch("/api/projects").then((res) => res.json());
+export const load: LayoutServerLoad = async ({ fetch }) => {
+  const projects: Project[] = await fetch("/api/projects").then((res) =>
+    res.json(),
+  );
   return {
     projects,
   };

@@ -1,9 +1,11 @@
 <script lang="ts">
-import { page } from "$app/stores";
 import type { Project } from "$lib/types";
-export let data: { projects: Project[] };
-$: project = data.projects.find(
-	(project) => project.link === $page.url.pathname.split("/")[2],
+import type { PageData } from "./$types";
+
+export let data: PageData;
+
+$: project = data.projects?.find(
+	(project: Project) => project.link === data.path,
 );
 </script>
 

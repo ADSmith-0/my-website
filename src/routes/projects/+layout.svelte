@@ -1,18 +1,18 @@
 <script lang="ts">
-import type { PageData } from "../$types";
-export let data: PageData;
+import type { LayoutData } from "./$types";
+export let data: LayoutData;
 </script>
 
-<div class="grid pl-10" style="grid-template-rows: minmax(200px, 1fr);">
-  <aside>
+<div class="grid pl-10" style="grid-template-columns: minmax(200px, auto) 1fr;">
+  <aside class="p-3 bri-1 border-grey-600">
     <a href="/" class="link fs-xl mb-5">&lt; Back</a>
-    <div class="flex-column">
+    <div class="flex-column gap-3">
       {#each data.projects as { name, tags, link } (name)}
-        <a href={`/projects/${link}`} style="display: block">{name} | {tags}</a>
+        <a href={`/projects/${link}`} class="fs-l">{name}</a>
       {/each}
     </div>
   </aside>
-  <main>
-    <slot {data} />
+  <main class="p-5">
+    <slot />
   </main>
 </div>
