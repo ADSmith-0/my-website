@@ -10,3 +10,5 @@ $: project = data.projects?.find(
 </script>
 
 <h1>{project?.name}</h1>
+<div class="flex-row-center">{project?.tags}</div>
+<p>{project?.description}</p>

@@ -7,7 +7,7 @@ export let data: LayoutData;
   <aside class="p-3 bri-1 border-grey-600">
     <a href="/" class="link fs-xl mb-5">&lt; Back</a>
     <div class="flex-column gap-3">
-      {#each data.projects as { name, tags, link } (name)}
+      {#each data.projects as { name, link } (name)}
         <a href={`/projects/${link}`} class="fs-l">{name}</a>
       {/each}
     </div>
