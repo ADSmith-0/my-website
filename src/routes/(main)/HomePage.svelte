@@ -1,6 +1,6 @@
 <script lang="ts">
 import { fly } from "svelte/transition";
-import Page from "./Page.svelte";
+import Page from "$lib/Page.svelte";
 import { onMount } from "svelte";
 
 const typewriter = (node: Node) => {

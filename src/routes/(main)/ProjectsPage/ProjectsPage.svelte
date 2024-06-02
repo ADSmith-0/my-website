@@ -1,4 +1,5 @@
 <script lang="ts">
+import Page from "$lib/Page.svelte";
 import ArtistNetworkIcon from "$lib/icons/ArtistNetworkIcon.svelte";
 import ChessIcon from "$lib/icons/ChessIcon.svelte";
 import GratelyIcon from "$lib/icons/GratelyIcon.svelte";
@@ -8,8 +9,7 @@ import PokedexIcon from "$lib/icons/PokedexIcon.svelte";
 import SvelteIcon from "$lib/icons/SvelteIcon.svelte";
 import { projects } from "$lib/projects";
 import type { ComponentType } from "svelte";
-import Page from "./Page.svelte";
-import Card from "./projects/Card.svelte";
+import Card from "./Card.svelte";
 
 const components: Record<string, ComponentType> = {
 	GratelyIcon,
