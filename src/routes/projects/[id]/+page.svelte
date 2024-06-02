@@ -1,12 +1,10 @@
 <script lang="ts">
-import type { Project } from "$lib/types";
+import { projects } from "$lib/projects";
 import type { PageData } from "./$types";
 
 export let data: PageData;
 
-$: project = data.projects?.find(
-	(project: Project) => project.link === data.path,
-);
+$: project = projects.find((project) => project.link === data.path);
 </script>
 
 <h1>{project?.name}</h1>

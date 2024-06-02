@@ -6,11 +6,10 @@ import JavaScriptIcon from "$lib/icons/JavaScriptIcon.svelte";
 import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
 import PokedexIcon from "$lib/icons/PokedexIcon.svelte";
 import SvelteIcon from "$lib/icons/SvelteIcon.svelte";
+import { projects } from "$lib/projects";
 import type { ComponentType } from "svelte";
-import type { PageData } from "../routes/$types";
 import Page from "./Page.svelte";
 import Card from "./projects/Card.svelte";
-export let data: PageData;
 
 const components: Record<string, ComponentType> = {
 	GratelyIcon,
@@ -29,7 +28,7 @@ const components: Record<string, ComponentType> = {
     class="grid-col-3fr gap-10 justify-content-center"
     style="max-width: 996px;"
   >
-    {#each data.projects as { name, link, projectLink, icon, iconSize, colour } (name)}
+    {#each projects as { name, link, projectLink, icon, iconSize, colour } (name)}
       <Card
         link={projectLink ?? link}
         text={name}
