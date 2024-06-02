@@ -228,6 +228,10 @@ a.link:hover {
   align-items: flex-start;
 }
 
+.align-self-start {
+  align-self: flex-start;
+}
+
 .margin-auto {
   margin: auto;
 }
