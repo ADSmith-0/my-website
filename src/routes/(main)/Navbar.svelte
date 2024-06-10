@@ -1,6 +1,5 @@
 <script lang="ts">
 import { browser } from "$app/environment";
-import { height } from "$lib/stores";
 import { onMount } from "svelte";
 
 const pages = ["home", "projects", "about"] as const;
@@ -18,15 +17,6 @@ let navMenu: HTMLElement;
 let underlineWidth = "0px";
 let underlineOffsetX = "0px";
 let highlightedNavItem: HTMLButtonElement;
-
-let innerHeight: number;
-const MIN_INNER_HEIGHT = 920;
-
-$: if (innerHeight > MIN_INNER_HEIGHT) {
-	height.set(innerHeight);
-} else if ($height !== MIN_INNER_HEIGHT) {
-	height.set(MIN_INNER_HEIGHT);
-}
 
 const navFocus = (event: MouseEvent | FocusEvent) => {
 	const element = event.target as HTMLAnchorElement;
@@ -71,7 +61,7 @@ const scrollend = () => {
 };
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight on:scrollend={scrollend} />
+<svelte:window bind:scrollY on:scrollend={scrollend} />
 
 <div id="content-container">
   <div

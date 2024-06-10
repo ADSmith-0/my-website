@@ -2,14 +2,17 @@
 import { height } from "./stores";
 export let id: string;
 export let className = "";
+$: console.log("$height:", $height);
+
+$: minHeight = $height ? `${$height}px` : "100vh";
 </script>
 
 <div
   {id}
   class="flex-column-center justify-content-center {className}"
-  style:min-height={$height ? $height + "px" : "100vh"}
+  style:min-height={minHeight}
 >
-  {#if $height}
+  {#if minHeight}
     <slot />
   {/if}
 </div>
