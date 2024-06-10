@@ -1,19 +1,17 @@
 <script lang="ts">
-import Page from "$lib/Page.svelte";
-import { projects } from "$lib/projects";
-import type { PageData } from "./$types";
-
-export let data: PageData;
+  import Page from "$lib/Page.svelte";
+  import type { PageData } from "./$types";
+  export let data: PageData;
 </script>
 
 <Page id="projects-info">
   <aside class="ph-8 bri-1 border-grey-600 flex-column gap-5">
     <a href="/" class="link fs-xl mt-3 mb-5 align-self-start">&lt; Back</a>
-    {#each projects as { name, link } (name)}
+    {#each data.projects as { name, link } (name)}
       <a
         href={`/projects/${link}`}
         class="fs-l"
-        class:highlighted={link === data.path}>{name}</a
+        class:highlighted={link === data.project.link}>{name}</a
       >
     {/each}
   </aside>
