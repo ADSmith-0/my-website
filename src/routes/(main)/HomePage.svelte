@@ -54,7 +54,6 @@ onMount(() => {
       {#if subtitleVisible}
         <p
           class="fs-xl text-secondary text-center"
-          style="max-width: 25em;"
           in:fly={{ y: 200, duration: 2000 }}
         >
           I enjoy making websites, web apps, mobile apps and tinkering around
@@ -67,6 +66,6 @@ onMount(() => {
 
 <style>
   :global(#home) {
-    background-image: linear-gradient(135deg, #667eea30 0%, #764ba230 100%);
+    background-image: linear-gradient(135deg, #667eea70 0%, #764ba270 100%);
   }
 </style>

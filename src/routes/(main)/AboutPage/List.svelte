@@ -9,7 +9,7 @@ export let backgroundColourEnd: string;
   style:--background-colour-start={backgroundColourStart}
   style:--background-colour-end={backgroundColourEnd}
 >
-  <h3 class="fs-l text-secondary mb-3">{title}</h3>
+  <h3 class="fs-m text-secondary mb-3">{title}</h3>
   <ul class="list flex-column-center align-items-start gap-5">
     <slot />
   </ul>
