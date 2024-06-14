@@ -8,9 +8,10 @@ import NeovimIcon from "$lib/icons/NeovimIcon.svelte";
 import PokedexIcon from "$lib/icons/PokedexIcon.svelte";
 import SvelteIcon from "$lib/icons/SvelteIcon.svelte";
 import { projects } from "$lib/projects";
+import { ArrowRight } from "lucide-svelte";
 import type { ComponentType } from "svelte";
 import Card from "./Card.svelte";
-import { ArrowRight } from "lucide-svelte";
+import { fly } from "svelte/transition";
 
 const components: Record<string, ComponentType> = {
 	GratelyIcon,
@@ -21,10 +22,34 @@ const components: Record<string, ComponentType> = {
 	PokedexIcon,
 	SvelteIcon,
 };
+
+let hovering = false;
+
+const setHovering = (newHovering: boolean): void => {
+	hovering = newHovering;
+};
 </script>
 
 <Page id="projects">
-  <h2 class="mv-10">Top Projects</h2>
+  <h2
+    class="mt-5 mb-10 link"
+    on:mouseover={() => setHovering(true)}
+    on:focus={() => setHovering(true)}
+    on:mouseleave={() => setHovering(false)}
+    on:blur={() => setHovering(false)}
+  >
+    <a href="/projects/grately" class="fs-3xl place-self-center"
+      ><span>Projects</span>
+      {#if hovering}
+        <span
+          style="display: inline-block;"
+          transition:fly={{ x: -20, duration: 400 }}
+        >
+          <ArrowRight />
+        </span>
+      {/if}
+    </a>
+  </h2>
   <div
     class="grid-cols w-75 gap-10 justify-content-center"
     style:--column-width="300px"
@@ -40,8 +65,5 @@ const components: Record<string, ComponentType> = {
         <svelte:component this={components[icon]} slot="image" />
       </Card>
     {/each}
-    <a href="/projects/grately" class="link fs-2xl place-self-center"
-      >More <ArrowRight /></a
-    >
   </div>
 </Page>

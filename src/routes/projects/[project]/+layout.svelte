@@ -18,7 +18,7 @@ export let data: PageData;
       >
     {/each}
   </aside>
-  <main class="p-5">
+  <main class="p-5 pl-10">
     <slot />
   </main>
 </Page>
@@ -26,7 +26,7 @@ export let data: PageData;
 <style>
   :global(#projects-info) {
     display: grid;
-    grid-template-columns: minmax(200px, auto) 1fr;
+    grid-template-columns: minmax(200px, max-content) 1fr;
     align-items: stretch;
     justify-items: start;
   }

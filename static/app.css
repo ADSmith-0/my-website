@@ -68,12 +68,20 @@
   background: repeating-linear-gradient(0deg, var(--grid-colour-2) 1px 2px, transparent 2px var(--grid-size)), repeating-linear-gradient(90deg, var(--grid-colour-2) 1px 2px, transparent 2px var(--grid-size)), var(--grey-950);
 }
 
-.bg-grey-950 {
-  background-color: var(--grey-950);
+.bg-grey-700 {
+  background: var(--grey-700);
+}
+
+.bg-grey-800 {
+  background: var(--grey-800);
 }
 
 .bg-grey-900-50 {
   background: var(--grey-900-50);
+}
+
+.bg-grey-950 {
+  background-color: var(--grey-950);
 }
 
 .bg-transparent {
@@ -140,8 +148,7 @@ button {
 }
 
 
-a.link {
-  position: relative;
+.link {
   position: relative;
   background-image: linear-gradient(var(--grey-700) 0 0);
   background-position: 0% 100%;
@@ -151,7 +158,7 @@ a.link {
   padding-right: var(--spacing-2);
 }
 
-a.link:hover {
+.link:hover {
   background-image: linear-gradient(var(--orange--40) 0 0);
   background-size: 100% 10%;
 }
@@ -325,6 +332,10 @@ a.link:hover {
 
 .br-2 {
   border-radius: var(--spacing-4);
+}
+
+.br-10 {
+  border-radius: var(--spacing-10);
 }
 
 .bb-1 {
