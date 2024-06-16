@@ -7,6 +7,7 @@ import TypeScriptIcon from "$lib/icons/TypeScriptIcon.svelte";
 import type { ComponentType } from "svelte";
 import List from "./List.svelte";
 
+// FIX: Fix bug where navbar cuts off the top of the new page
 const favouriteTechnologies: [name: string, icon: ComponentType][] = [
 	["Svelte", SvelteIcon],
 	["TypeScript", TypeScriptIcon],
