@@ -10,11 +10,11 @@ export let data: PageData;
     <a href="/" class="flex-row-center gap-3 fs-xl mt-3 mb-5 align-self-start"
       ><ArrowLeft /> Back</a
     >
-    {#each data.projects as { name, link } (name)}
+    {#each data.projects as { name, path } (name)}
       <a
-        href={`/projects/${link}`}
+        href={`/projects/${path}`}
         class="fs-l pl-5"
-        class:highlighted={link === data.project.link}>{name}</a
+        class:highlighted={path === data.project.path}>{name}</a
       >
     {/each}
   </aside>
