@@ -33,9 +33,9 @@ const components: Record<string, ComponentType> = {
     style:--column-width="300px"
     style="max-width: 996px;"
   >
-    {#each projects as { name, link, projectLink, icon, iconSize, colour } (name)}
+    {#each projects as { name, path, projectLink, githubLink, icon, iconSize, colour } (name)}
       <Card
-        link={projectLink ?? link}
+        link={projectLink ?? githubLink ?? `/projects/${path}`}
         text={name}
         borderColour={colour}
         {iconSize}
@@ -53,17 +53,18 @@ const components: Record<string, ComponentType> = {
   }
 
   #title::after {
-    position: absolute;
+    position: relative;
     display: inline-block;
     content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtYXJyb3ctcmlnaHQiIHN0cm9rZT0iI2UxZGJkNiI+PHBhdGggZD0iTTUgMTJoMTQiLz48cGF0aCBkPSJtMTIgNSA3IDctNyA3Ii8+PC9zdmc+);
-    top: calc(-1 * var(--spacing-2));
+    max-width: 0;
     right: 0;
     opacity: 0;
     transition: all linear 0.3s;
   }
 
   #title:hover::after {
-    transform: translateX(var(--spacing-8));
+    max-width: 80px;
+    transform: translateX(var(--spacing-3));
     opacity: 1;
   }
 </style>
