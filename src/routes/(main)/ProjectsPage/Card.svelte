@@ -8,7 +8,7 @@ export let borderColour = "#0cf";
 
 <a
   href={link}
-  target="_blank"
+  target={link[0] !== "/" ? "_blank" : undefined}
   rel="noopener noreferrer"
   class="flex-row-center justify-content-center card p-5 br-1 border-box cursor-pointer animated-border"
   style:--border-colour={borderColour}
