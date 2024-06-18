@@ -53,18 +53,16 @@ const components: Record<string, ComponentType> = {
   }
 
   #title::after {
-    position: relative;
+    position: absolute;
     display: inline-block;
     content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtYXJyb3ctcmlnaHQiIHN0cm9rZT0iI2UxZGJkNiI+PHBhdGggZD0iTTUgMTJoMTQiLz48cGF0aCBkPSJtMTIgNSA3IDctNyA3Ii8+PC9zdmc+);
-    max-width: 0;
     right: 0;
     opacity: 0;
     transition: all linear 0.3s;
   }
 
   #title:is(:hover, :focus)::after {
-    max-width: 80px;
-    transform: translateX(var(--spacing-3));
+    transform: translateX(var(--spacing-7));
     opacity: 1;
   }
 </style>
