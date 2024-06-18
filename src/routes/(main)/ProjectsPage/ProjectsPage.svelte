@@ -62,7 +62,7 @@ const components: Record<string, ComponentType> = {
     transition: all linear 0.3s;
   }
 
-  #title:hover::after {
+  #title:is(:hover, :focus)::after {
     max-width: 80px;
     transform: translateX(var(--spacing-3));
     opacity: 1;
