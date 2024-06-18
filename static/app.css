@@ -156,6 +156,7 @@ button {
   background-repeat: no-repeat;
   padding-left: var(--spacing-2);
   padding-right: var(--spacing-2);
+  transition: all 0.1s linear;
 }
 
 .link:is(:hover, :focus) {
