@@ -49,7 +49,7 @@ export const projects: Project[] = [
   },
   {
     name: "Portfolio Website",
-    tags: ["Sveltekit"],
+    tags: ["Sveltekit", "Netlify"],
     description:
       "This is the website that you are currently using. It was made with Sveltekit and Lucide icons, with no other libraries involved. All styling and functionality is hand written HTML, CSS and JavaScript",
     path: "my-website",
