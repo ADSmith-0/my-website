@@ -33,9 +33,9 @@ const components: Record<string, ComponentType> = {
     style:--column-width="300px"
     style="max-width: 996px;"
   >
-    {#each projects as { name, path, projectLink, githubLink, icon, iconSize, colour } (name)}
+    {#each projects as { name, path, projectLink, icon, iconSize, colour } (name)}
       <Card
-        link={projectLink ?? githubLink ?? `/projects/${path}`}
+        link={projectLink ?? `/projects/${path}`}
         text={name}
         borderColour={colour}
         {iconSize}
